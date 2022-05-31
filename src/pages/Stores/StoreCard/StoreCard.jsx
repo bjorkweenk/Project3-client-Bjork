@@ -2,7 +2,7 @@ import './CoasterCard.css'
 import { Button, Card } from "react-bootstrap"
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { AuthContext } from './../../context/auth.context'
+import { AuthContext } from '../../../context/auth.context'
 
 
 const CoasterCard = ({ _id, imageUrl, title, owner }) => {
