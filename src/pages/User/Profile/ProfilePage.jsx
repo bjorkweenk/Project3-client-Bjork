@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { Container } from "react-bootstrap"
-import { AuthContext } from "../../context/auth.context"
+import { AuthContext } from "../../../context/auth.context"
 
 const ProfilePage = () => {
 
