@@ -17,7 +17,7 @@ const StoreCard = ({ _id, imageUrl, title, owner }) => {
             See details
           </Link>
           {owner && owner === user?._id && (
-            <Button variant="warning" onClick={() => alert("TE LO CURRAS")}>
+            <Button variant="warning" onClick={() => alert("Try again")}>
               Edit
             </Button>
           )}
