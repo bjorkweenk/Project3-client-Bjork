@@ -69,7 +69,7 @@ Stores model
 storeName: {type: String, required: true},
 address: {type: String, required: true, unique: true},
 storePhone: {type: String, required: true},
-storeImg: {type: String, default: "https://easterntradelinks.com/front/images/default.png"},
+storeImg: {type: String},
 deliveryTime: {type: String, enum: ["15 min", "15-30 min", "30-45 min"]},
 priceRange: {type: String, enum: ["$", "$$", "$$$"]},
 isUnder30Min: {type: Boolean},
