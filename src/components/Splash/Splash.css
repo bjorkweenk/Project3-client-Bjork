@@ -2,13 +2,13 @@ section {
     background-image: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center; 
-    width: 40%;
-    height: 90px; 
+    background-position: center center;
+    width: 300px;
+    height: 200px;
     border-radius: 20px;
-    margin-left: 10px;
-    margin-bottom: 30px;
-    margin-top: -20px
+    margin-left: 40px;
+    margin-bottom: 60px;
+
 
 }
 
@@ -17,58 +17,60 @@ section {
     width: 100vh;
     display: flex;
     align-items: center;
-   
-   
+
+
 }
 
 /*text*/
 .connect {
-    font-size: 10px;
-    margin-left: 20px;
-    margin-right: 30px;
+    font-size: 30px;
 }
 
 .connectRecommend {
-    font-size: 10px; 
+    font-size: 30px;
     margin-left: 20px;
+    margin-bottom: -90px;
 }
 
 .connectShare {
-    font-size: 10px;
+    font-size: 30px;
     margin-right: 10px;
     margin-left: 20px;
+    margin-top: 50px;
 
 }
 
 .Friends {
     background-image: url(https://images.unsplash.com/photo-1543807535-eceef0bc6599?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
-    height: 60px;
-    width: 60px;
-   border-radius: 20px;
-   margin-left: 10px;
-   
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    margin-left: 150px;
+    margin-top: 50px;
+
 }
 
 .Share {
     background-image: url(https://images.unsplash.com/photo-1579208575657-c595a05383b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
-    height: 60px;
-    width: 60px;
-   border-radius: 20px;
-   margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 60px;
 
 }
 
 .Recommend {
     background-image: url(https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
-    height: 60px;
-    width: 60px;
-   border-radius: 20px;
-   margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    margin-left: 80px;
+    margin-top: 80px;
 }
 
-html, body {
+html,
+body {
     height: 30%;
     width: 100%;
 }
-    
-    

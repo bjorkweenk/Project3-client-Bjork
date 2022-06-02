@@ -1,15 +1,26 @@
-//import axios from "axios"
 //import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Container } from "react-bootstrap"
 //import Favourites from "./../../../components/Favourites/Favourites"
 //import { AuthContext } from "../../../context/auth.context
 import "./Profile.css"
+import userService from "../../../services/user.service"
+import {AuthContext} from "../../../context/auth.context"
+import Loader from "../../../components/Loader/Loader"
 
-const ProfilePage = ({ username, userImg, favoriteStores, storeImage }) => {
+
+const ProfilePage = () => {
+
+    const { user } = useContext(AuthContext)
+
+    useEffect(()=> userService.getOneUser())
+
     return (
+        <>
+        {user ?
         <Container>
-            <h1> Name {username}</h1> 
-          <div class="borderUserPicture">  <img src={userImg} alt="picture user"></img> </div>
+            <h1> Name {user.username}</h1> 
+          <div class="borderUserPicture">  <img src={user.userImg} alt="picture user"></img> </div>
           <br></br>
             <a href="../ProfileEdit"><button> edit</button></a>
     
@@ -18,7 +29,7 @@ const ProfilePage = ({ username, userImg, favoriteStores, storeImage }) => {
          {/*  <Favourites likes={favoriteStores}/> */} 
             <h4> You're Favorites </h4>
 
-<div class="container">
+{/* <div class="container">
   <div class="row">
   
 
@@ -45,11 +56,14 @@ const ProfilePage = ({ username, userImg, favoriteStores, storeImage }) => {
     </div>
 
   </div>
-</div>
+</div> */}
 
        
 
         </Container>
+        :
+        <Loader />}
+        </>
     )
 }
 

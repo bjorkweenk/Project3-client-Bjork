@@ -19,7 +19,7 @@ const Signup = () => {
         authService
             .signup(signupData)
             .then(res => {
-                navigate('/profile/:id')
+                navigate(`/profile/${res.data._id}`)
             })
             .catch(err => console.log(err))
     }

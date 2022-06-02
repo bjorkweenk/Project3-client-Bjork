@@ -9,6 +9,7 @@ import ProfileEdit from "../pages/User/ProfileEdit/ProfileEdit";
 import Signup from "../components/SignupForm/Signup";
 //import PrivateRoute from "./PrivateRoute"
 
+
 const AppRoutes = () => {
   return (
     <Routes>

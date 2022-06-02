@@ -16,8 +16,8 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink to="/" className="nav-link">Profile</NavLink>
-                        <NavLink to="../../Friends" className="nav-link">Friends</NavLink>
+                        <NavLink to="/profile/:id" className="nav-link">Profile</NavLink>
+                        <NavLink to="/Friends" className="nav-link">Friends</NavLink>
 
                         {
                             isLoggedIn
