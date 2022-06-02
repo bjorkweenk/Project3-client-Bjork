@@ -2,6 +2,7 @@ import { Row, Col } from "react-bootstrap"
 import FriendsCard from "../FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
 
+
 const Friends= ({ friends }) => {
 
     return (
@@ -23,4 +24,9 @@ const Friends= ({ friends }) => {
     )
 }
 
-export default Friends;
+export default Friends
+
+
+
+
+
