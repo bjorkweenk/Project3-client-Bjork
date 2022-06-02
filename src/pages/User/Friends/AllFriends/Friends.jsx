@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap"
-import FriendsCard from "./FriendsCard/FriendsCard"
-import Loader from "../Loader/Loader"
+import FriendsCard from "../FriendsCard/FriendsCard"
+import Loader from "../../../../components/Loader/Loader"
 
 const Friends= ({ friends }) => {
 

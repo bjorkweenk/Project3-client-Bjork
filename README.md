@@ -54,7 +54,7 @@ Users model
 username: {type: String, required: true, unique: true},
 email: {type: String, required: true, unique: true},
 password: {type: String, required: true},
-favoritesStores: [{type: Schema.Types.ObjectId,ref:'Stores'}],
+FavouritesStores: [{type: Schema.Types.ObjectId,ref:'Stores'}],
 friends: [{type: Schema.Types.ObjectId,ref:'Users'}],
 tagLine: {type: String},
 comments: [{type: Schema.Types.ObjectId,ref:'Comments'}],

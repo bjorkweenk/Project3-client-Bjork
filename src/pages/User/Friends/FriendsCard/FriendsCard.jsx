@@ -1,16 +1,18 @@
+
+/*
 //const User = require("./../models/user.model");
-import FriendsCard from "./Friends.css";
-import { Card } from "react-bootstrap";
-import { Link, Button } from "react-router-dom";
+import FriendsCardStyle from "./FriendsCardStyle.css";
+import { Card, Button, Form } from "react-bootstrap";
+import {Link } from 'react-router-dom'
 import { React, useContext, useState, useEffect } from "react";
-import { AuthContext } from "../../../context/auth.context";
+import { AuthContext } from "../../../../context/auth.context.js";
 import FriendService from "../../../../services/friends.service";
 
 const FriendsCard = ({ username, userImg }) => {
   const [isFollowing, setIsFollowing] = useState(false);
 
   useEffect(() => {
-    FriendService.followFriend(friend._id);
+    FriendService.followFriend(friend_.id);
     setIsFollowing(false);
   }, []);
 
@@ -30,8 +32,8 @@ const FriendsCard = ({ username, userImg }) => {
       .catch((err) => console.log("Unable to break the relationship", err));
   };
 
-  /*     const { user } = useContext(AuthContext)
-   */
+  const { user } = useContext(AuthContext)
+   
   return (
     <Card className="friendsCard">
       <Card.Img variant="top" src={userImg} />
@@ -39,7 +41,7 @@ const FriendsCard = ({ username, userImg }) => {
         <Card.Title>{username}</Card.Title>
         <div className="d-grid gap-2">
           <Link to={`/profile/${_id}`} className="btn btn-dark"></Link>
-          isFollowing ?{" "}
+          {isFollowing }?{" "}
           {
             <Form onSubmit={handleUnfollow}>
               <Button variant="dark" type="submit" className="friendsBtn">
@@ -62,3 +64,4 @@ const FriendsCard = ({ username, userImg }) => {
 };
 
 export default FriendsCard;
+*/
