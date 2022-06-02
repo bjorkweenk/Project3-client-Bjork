@@ -1,14 +1,16 @@
 import { Row, Col } from "react-bootstrap"
+import {useState, useEffect} from 'react'
 import FriendsCard from "../FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
+import FriendsService from "./../../../../services/friends.service.js"
 
 const SearchFriends= ({ user }) => {
 
-    const [searchBarData, setSearchBarData] = useState("");
+    const [searchFriendData, setSearchFriendData] = useState("");
 
     const handleSearch = (e) => {
        let value = e.target.value;
-       setSearchBarData(value);
+       setSearchFriendData(value);
     }
 
     return (

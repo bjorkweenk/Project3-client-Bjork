@@ -23,7 +23,7 @@ const Friends= () => {
                     friends.map(friend => {
                         return (
                             <Col md={{ span: 4 }} key={friend._id}>
-                                <FriendsCard {...friend} />
+                                <FriendsCard friend = {friend} />
                             </Col>
                         )
                     })
