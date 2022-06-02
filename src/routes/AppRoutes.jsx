@@ -1,31 +1,34 @@
-import { Routes, Route } from "react-router-dom"
-import CoasterDetailsPage from "../pages/CoasterDetailsPage/CoasterDetailsPage"
-import CoastersPage from '../pages/CoastersPage/CoastersPage'
-import IndexPage from "../pages/HomePage/HomePage"
-import LoginPage from "../pages/LoginPage/LoginPage"
-import ProfilePage from "../pages/ProfilePage/ProfilePage"
-import SignupPage from "../pages/SignupPage/SignupPage"
-import PrivateRoute from "./PrivateRoute"
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import StoreDetails from "../pages/Stores/StoreDetails/StoreDetails";
+import Friends from "../pages/User/Friends/AllFriends/Friends";
+import Splash from "../components/Splash/Splash";
+import Login from "../components/LoginForm/Login";
+import ProfilePage from "../pages/User/Profile/ProfilePage";
+import ProfileEdit from "../pages/User/ProfileEdit/ProfileEdit";
+import Signup from "../components/SignupForm/Signup";
+import SearchFriends from "../pages/User/Friends/SearchFriends/SearchFriends"
+//import PrivateRoute from "./PrivateRoute"
 
 const AppRoutes = () => {
-
-    return (
-        <Routes>
-            <Route path="/" element={<IndexPage />} />
-            <Route path="/galeria" element={<CoastersPage />} />
-            <Route path="/detalles/:coaster_id" element={<CoasterDetailsPage />} />
-            <Route path="/registro" element={<SignupPage />} />
-            <Route path="/inicio-sesion" element={<LoginPage />} />
-
-            <Route path="/perfil" element={<PrivateRoute />}>
-                <Route path="" element={<ProfilePage />} />
-            </Route>
+  return (
+    <Routes>
+      <Route path="/" element={<Splash />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/friends" element={<Friends />} />
+      <Route path="/search-friends" element={<SearchFriends />} />
 
 
-            <Route path="*" element={<h1>Esto es un 404, melón</h1>} />
-        </Routes>
-    )
-}
+      <Route path="/profile/:id" element={<ProfilePage />}/>
+        <Route path="/profile-edit/:id" element={<ProfileEdit />}>
+      </Route>
 
-export default AppRoutes
+      <Route path="/store-details/:id" element={<StoreDetails />} />
+
+      <Route path="*" element={<h1>Oops!! There was en error</h1>} />
+    </Routes>
+  );
+};
+
+export default AppRoutes;

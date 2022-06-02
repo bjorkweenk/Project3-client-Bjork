@@ -4,26 +4,24 @@ import FriendsCard from "../FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
 import FriendsService from "./../../../../services/friends.service.js"
 
+const SearchFriends= ({ user }) => {
 
-const Friends= () => {
+    const [searchFriendData, setSearchFriendData] = useState("");
 
-    const [friends, setFriends] = useState(null);
-
-    useEffect(() => {
-        FriendsService
-        .getAllFriends()
-        .then((apiFriends) => setFriends(apiFriends))
-    }, [])
+    const handleSearch = (e) => {
+       let value = e.target.value;
+       setSearchFriendData(value);
+    }
 
     return (
-        friends
+        user.length
             ?
             <Row>
                 {
-                    friends.map(friend => {
+                    user.map(friend => {
                         return (
                             <Col md={{ span: 4 }} key={friend._id}>
-                                <FriendsCard friend = {friend} />
+                                <FriendsCard {...friend} />
                             </Col>
                         )
                     })
@@ -34,9 +32,4 @@ const Friends= () => {
     )
 }
 
-export default Friends
-
-
-
-
-
+export default SearchFriends

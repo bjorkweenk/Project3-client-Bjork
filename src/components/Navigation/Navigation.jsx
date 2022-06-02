@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/auth.context'
 
+
 const Navigation = () => {
 
     const { user, logOutUser, isLoggedIn } = useContext(AuthContext)
@@ -11,21 +12,21 @@ const Navigation = () => {
     return (
         <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Coasters app!</Navbar.Brand>
+                <Navbar.Brand href="#home">Sharelicious!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink to="/" className="nav-link">Inicio</NavLink>
-                        <NavLink to="/galeria" className="nav-link">Galería</NavLink>
+                        <NavLink to="/" className="nav-link">Profile</NavLink>
+                        <NavLink to="../../Friends" className="nav-link">Friends</NavLink>
 
                         {
                             isLoggedIn
                                 ?
-                                <div className="nav-link" onClick={logOutUser}>Cerrar sesión</div>
+                                <div className="nav-link" onClick={logOutUser}>Logout</div>
                                 :
                                 <>
-                                    <NavLink to="/registro" className="nav-link">Registro</NavLink>
-                                    <NavLink to="/inicio-sesion" className="nav-link">Iniciar sesión</NavLink>
+                                    <NavLink to="/Signup" className="nav-link">Signup</NavLink>
+                                    <NavLink to="/Login" className="nav-link">Login</NavLink>
                                 </>
                         }
 
