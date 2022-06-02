@@ -1,0 +1,19 @@
+.storeImage {
+    border: 1px solid black ; 
+    height: 200px;
+    width: 200px;
+
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: space-evenly;
+
+}
+
+
+
+
+
+

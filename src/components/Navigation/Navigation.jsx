@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { AuthContext } from '../../context/auth.context'
 
+
 const Navigation = () => {
 
     const { user, logOutUser, isLoggedIn } = useContext(AuthContext)
@@ -16,7 +17,7 @@ const Navigation = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavLink to="/" className="nav-link">Profile</NavLink>
-                        <NavLink to="/galeria" className="nav-link">Friends</NavLink>
+                        <NavLink to="../../Friends" className="nav-link">Friends</NavLink>
 
                         {
                             isLoggedIn
@@ -24,8 +25,8 @@ const Navigation = () => {
                                 <div className="nav-link" onClick={logOutUser}>Logout</div>
                                 :
                                 <>
-                                    <NavLink to="/registro" className="nav-link">Signup</NavLink>
-                                    <NavLink to="/inicio-sesion" className="nav-link">Login</NavLink>
+                                    <NavLink to="/Signup" className="nav-link">Signup</NavLink>
+                                    <NavLink to="/Login" className="nav-link">Login</NavLink>
                                 </>
                         }
 
