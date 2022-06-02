@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col } from "react-bootstrap"
 import {useState, useEffect} from 'react'
 import FriendsCard from "../FriendsCard/FriendsCard"

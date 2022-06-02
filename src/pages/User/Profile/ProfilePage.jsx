@@ -1,5 +1,6 @@
 //import axios from "axios"
 //import { useContext } from "react"
+import React from 'react';
 import { Container } from "react-bootstrap"
 import Favourites from "./../../../components/Favourites/Favourites"
 //import { AuthContext } from "../../../context/auth.context
@@ -7,6 +8,7 @@ import "./Profile.css"
 
 const ProfilePage = ({ username, userImg, favoriteStores, storeImage }) => {
     return (
+      <>
         <Container>
             <h1> User {username}</h1> 
             <img src={userImg} alt="picture user"></img>
@@ -18,8 +20,8 @@ const ProfilePage = ({ username, userImg, favoriteStores, storeImage }) => {
        
 
         </Container>
-    )
-}
+    
+
 
 <div class="container">
   <div class="row">
@@ -34,6 +36,8 @@ const ProfilePage = ({ username, userImg, favoriteStores, storeImage }) => {
     </div>
   </div>
 </div>
+</>
+    )}
 
 export default ProfilePage
 
