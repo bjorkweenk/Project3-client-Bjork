@@ -10,10 +10,10 @@ import FriendService from "../../../../services/friends.service";
 const FriendsCard = ({ username, userImg }) => {
   const [isFollowing, setIsFollowing] = useState(false);
 
-  useEffect(() => {
+ /*  useEffect(() => {
     FriendService.followFriend(user);
     setIsFollowing(false);
-  }, []);
+  }, []); */
 
   const handleFollow = (e) => {
     e.preventDefault();
