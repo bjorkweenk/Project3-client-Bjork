@@ -17,7 +17,7 @@ const Navigation = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <NavLink to="/profile/:id" className="nav-link">Profile</NavLink>
-                        <NavLink to="/Friends" className="nav-link">Friends</NavLink>
+                        <NavLink to="/friends" className="nav-link">Friends</NavLink>
 
                         {
                             isLoggedIn
@@ -25,8 +25,8 @@ const Navigation = () => {
                                 <div className="nav-link" onClick={logOutUser}>Logout</div>
                                 :
                                 <>
-                                    <NavLink to="/Signup" className="nav-link">Signup</NavLink>
-                                    <NavLink to="/Login" className="nav-link">Login</NavLink>
+                                    <NavLink to="/signup" className="nav-link">Signup</NavLink>
+                                    <NavLink to="/login" className="nav-link">Login</NavLink>
                                 </>
                         }
 

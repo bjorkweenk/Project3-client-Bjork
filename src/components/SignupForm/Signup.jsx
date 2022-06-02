@@ -50,7 +50,7 @@ const Signup = () => {
                 <Form.Control type="password" onChange={handleInputChange} name="password" value={password} />
             </Form.Group>
 
-            <Button variant="dark" type="submit">Signup</Button>
+            <Button  variant="dark" type="submit">Signup</Button>
         </Form>
 
     )
