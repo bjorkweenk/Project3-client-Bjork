@@ -5,7 +5,7 @@ class FriendsService {
         this.app = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}/friends` })
     }
 
-    followFriend = friend_id =>{
+    followFriend = (friend_id) =>{
         return this.app.post(`/follow-friends`, friend_id)
     }
 
