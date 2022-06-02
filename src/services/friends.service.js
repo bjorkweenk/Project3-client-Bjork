@@ -6,11 +6,15 @@ class FriendsService {
     }
 
     followFriend = (friend_id) =>{
-        return this.app.post(`/follow-friends`, friend_id)
+        return this.app.post(`/api/user/follow/`, friend_id)
+    }
+
+    searchNewFriends = (user) => {
+        return this.app.get(`/api/search/user`)
     }
 
     getAllFriends = () => {
-        return this.app.get('/friends')
+        return this.app.get('/api/user/friends')
     }
 }
 
