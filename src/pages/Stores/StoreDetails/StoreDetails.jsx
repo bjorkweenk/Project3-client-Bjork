@@ -51,3 +51,9 @@ function CoasterDetailsPage() {
 
 export default CoasterDetailsPage
 */
+
+export default function StoreDetails() {
+    return (
+        <h1> Store Details</h1>
+    )
+}
