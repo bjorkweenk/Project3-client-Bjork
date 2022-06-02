@@ -36,7 +36,7 @@ const Signup = () => {
         <Form onSubmit={handleSubmit}>
 
             <Form.Group className="mb-3" controlId="username">
-                <Form.Label>Nombre de usuario</Form.Label>
+                <Form.Label>Username</Form.Label>
                 <Form.Control type="text" onChange={handleInputChange} name="username" value={username} />
             </Form.Group>
 
@@ -46,11 +46,11 @@ const Signup = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="password">
-                <Form.Label>Contraseña</Form.Label>
+                <Form.Label>Password</Form.Label>
                 <Form.Control type="password" onChange={handleInputChange} name="password" value={password} />
             </Form.Group>
 
-            <Button variant="dark" type="submit">Registrarme</Button>
+            <Button variant="dark" type="submit">Signup</Button>
         </Form>
 
     )

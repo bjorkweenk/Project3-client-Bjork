@@ -1,3 +1,4 @@
+/*
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import coastersService from '../../../services/coaster.service'
@@ -49,3 +50,4 @@ function CoasterDetailsPage() {
 }
 
 export default CoasterDetailsPage
+*/

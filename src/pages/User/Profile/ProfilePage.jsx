@@ -1,20 +1,25 @@
-import axios from "axios"
-import { useContext } from "react"
+//import axios from "axios"
+//import { useContext } from "react"
 import { Container } from "react-bootstrap"
-import { AuthContext } from "../../../context/auth.context"
+import Favourites from "./../../../components/Favourites/Favourites"
+//import { AuthContext } from "../../../context/auth.context"
 
-const ProfilePage = () => {
+const ProfilePage = ({ username, userImg, favoriteStores }) => {
     return (
         <Container>
-
-            <h1> User {user?.username}</h1>
+            <h1> User {username}</h1> 
+            <img src={userImg} alt=""></img>
             <button> edit</button>
     
-            <Favorites likes={user.likes.map()}/>
+            <Favourites likes={favoriteStores}/>
             <h4> Title </h4>
-           <img src={storeImg}></img> 
+           <img src={userImg} alt=""></img>
+
+
         </Container>
     )
 }
 
 export default ProfilePage
+
+// question mark in username
