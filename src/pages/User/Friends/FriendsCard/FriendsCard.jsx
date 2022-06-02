@@ -1,5 +1,4 @@
 
-/*
 //const User = require("./../models/user.model");
 import FriendsCardStyle from "./FriendsCardStyle.css";
 import { Card, Button, Form } from "react-bootstrap";
@@ -12,14 +11,14 @@ const FriendsCard = ({ username, userImg }) => {
   const [isFollowing, setIsFollowing] = useState(false);
 
   useEffect(() => {
-    FriendService.followFriend(friend_.id);
+    FriendService.followFriend(user);
     setIsFollowing(false);
   }, []);
 
   const handleFollow = (e) => {
     e.preventDefault();
 
-    FriendService.followFriend(friend._id)
+    FriendService.followFriend(user)
       .then(() => setIsFollowing(true))
       .catch((err) => console.log("Unable to stablish the relationship", err))
   };
@@ -27,7 +26,7 @@ const FriendsCard = ({ username, userImg }) => {
   const handleUnfollow = (e) => {
     e.preventDefault();
 
-    FriendService.followFriend(friend._id)
+    FriendService.followFriend(user)
       .then(() => setIsFollowing(false))
       .catch((err) => console.log("Unable to break the relationship", err));
   };
@@ -40,7 +39,7 @@ const FriendsCard = ({ username, userImg }) => {
       <Card.Body>
         <Card.Title>{username}</Card.Title>
         <div className="d-grid gap-2">
-          <Link to={`/profile/${_id}`} className="btn btn-dark"></Link>
+          <Link to={`/profile/${user.id}`} className="btn btn-dark"></Link>
           {isFollowing }?{" "}
           {
             <Form onSubmit={handleUnfollow}>
@@ -64,4 +63,3 @@ const FriendsCard = ({ username, userImg }) => {
 };
 
 export default FriendsCard;
-*/
