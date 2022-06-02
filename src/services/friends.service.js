@@ -10,7 +10,7 @@ class FriendsService {
     }
 
     searchNewFriends = (user) => {
-        return this.app.get(`/api/search/user`)
+        return this.app.get(`/api/search/user`, user)
     }
 
     getAllFriends = () => {
