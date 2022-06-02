@@ -7,20 +7,24 @@ import Login from "../components/LoginForm/Login";
 import ProfilePage from "../pages/User/Profile/ProfilePage";
 import ProfileEdit from "../pages/User/ProfileEdit/ProfileEdit";
 import Signup from "../components/SignupForm/Signup";
+import SearchFriends from "../pages/User/Friends/SearchFriends/SearchFriends"
 //import PrivateRoute from "./PrivateRoute"
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Splash />} />
-      <Route path="/friends" element={<Friends />} />
-      <Route path="/store-details/:id" element={<StoreDetails />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/friends" element={<Friends />} />
+      <Route path="/search-friends" element={<SearchFriends />} />
+
 
       <Route path="/profile/:id" element={<ProfilePage />}/>
         <Route path="/profile-edit/:id" element={<ProfileEdit />}>
       </Route>
+
+      <Route path="/store-details/:id" element={<StoreDetails />} />
 
       <Route path="*" element={<h1>Oops!! There was en error</h1>} />
     </Routes>

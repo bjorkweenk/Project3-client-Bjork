@@ -5,8 +5,16 @@ class FriendsService {
         this.app = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}/friends` })
     }
 
-    followFriend = (friend_id) =>{
-        return this.app.post(`/api/user/follow/`, friend_id)
+    followFriend = (friendId) =>{
+        return this.app.post(`/api/user/follow/${friendId}`)
+    }
+
+    unfollowFriend = (friendId) =>{
+        return this.app.post (`/api/user/unfollow/${friendId}`)
+    }
+    
+    checkIfFollowing = (friendId) =>{
+        return this.app.get(`/api/user/checkfollowing/${friendId}`)
     }
 
     searchNewFriends = (user) => {
