@@ -21,7 +21,7 @@ const LikesBtn = (props) => {
         e.preventDefault();
     
         axios
-        .post("/")
+        .post("/api/user/favourites")
           .then(() => setStoresLikes(likedStores))
           .catch((err) => console.log(err))
     }  
