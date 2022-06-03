@@ -1,39 +1,66 @@
-//import { Row, Col } from "react-bootstrap"
-import {useState, useEffect} from 'react'
-//import FriendsCard from "../FriendsCard/FriendsCard"
+import { Row, Col } from "react-bootstrap"
+import {useState, useEffect, useContext} from 'react'
+import FriendsCard from "../FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
+import { AuthContext } from '../../../../context/auth.context'
 import FriendsService from "./../../../../services/friends.service.js"
 
-const SearchFriends= ({ user }) => {
+const SearchFriends= () => {
+    const {user} = useContext(AuthContext)
+    const [friendsData, setFriendsData] = useState(null);
+    const [friends, setFriends] = useState(null);
+    const [search, setSearch] = useState("");
 
-    const [searchFriendData, setSearchFriendData] = useState("");
+    useEffect(() => {
+        FriendsService
+        .searchNewFriends()
+        .then((users) => {
+            setFriendsData(users)
+        })
+    }, [])
 
     const handleSearch = (e) => {
-       let value = e.target.value;
+        let value = e.target.value;
+        setSearch(value);
 
-       FriendsService
-       .searchNewFriends(value)
-       .then(() => {
-        setSearchFriendData(value);
-       })
+        if (value === "") {
+            setFriends(null);
+          } else {
+            const newFriendsSearch = friendsData.filter((friend) =>
+              friend.username.toLowerCase().includes(search.toLowerCase())
+            );
+            setFriends(newFriendsSearch);
+        };
+
+       setFriends(value);
     }
 
     return (
-        user.length
-            ?
+
         <div className="input-group">
-            <form onSubmit={handleSearch}>
+            <form >
             <div className="form-outline">
-                <input type="search" id="form1" className="form-control" />
+                <input onChange={handleSearch} value={search} type="search" id="form1" className="form-control" />
                 <label className="form-label" for="form1">Search</label>
             </div>
         <button type="submit" className="btn btn-primary">
             <i className="fas fa-search"></i>
         </button>
         </form>
-        </div>
+        {friends} ?
+        {
+            friends.map(friend => {
+                return (
+                            <Col md={{ span: 4 }} key={friend._id}>
+                                <FriendsCard friend = {friend} />
+                            </Col>
+                        )
+            })
+                }
+        
             :
             <Loader />
+        </div>
     )
 }
 
