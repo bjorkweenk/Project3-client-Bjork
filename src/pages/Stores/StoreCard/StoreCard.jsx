@@ -3,6 +3,7 @@ import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/auth.context";
+import LikesBtn from "../../../components/Likes/LikesBtn"
 
 const StoreCard = ({ store }) => {
   //const { user } = useContext(AuthContext);
@@ -21,6 +22,7 @@ const StoreCard = ({ store }) => {
           <p class="card-text">{store.deliveryTime}</p>
           <p class="card-text">{store.priceRange}</p>
           <p class="card-text">{store.storeLikes}</p>
+          <LikesBtn />
         </div>
       </Card.Body>
     </Card>
