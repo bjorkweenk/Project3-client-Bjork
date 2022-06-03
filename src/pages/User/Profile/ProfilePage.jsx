@@ -25,11 +25,11 @@ const ProfilePage = () => {
             <a href="../ProfileEdit"><button> edit</button></a>
     
 
-
-         {/*  <Favourites likes={favoriteStores}/> */} 
+{/* 
+          <Favourites likes={favoriteStores}/> 
             <h4> You're Favorites </h4>
 
-{/* <div class="container">
+ <div class="container">
   <div class="row">
   
 
@@ -56,7 +56,7 @@ const ProfilePage = () => {
     </div>
 
   </div>
-</div> */}
+</div>  */}
 
        
 
