@@ -15,10 +15,14 @@ const ProfilePage = () => {
     const {user} = useContext(AuthContext)
     const [profile, setProfile] = useState(null)
 
-    useEffect(()=>{
-      if(user) userService.getOneUser(user._id)
-      .then(user => setProfile(user))
-      .catch(err => console.log(err));
+    useEffect(() => {
+      if(user) {
+        userService.getOneUser(user._id)
+        .then(response => {
+          setProfile(response.data)
+        })
+        .catch(err => console.log(err));
+    }
     }, [user])
     /* useEffect(() => uploadService.getUploadImage()) // bjork added 11.00 */
 
@@ -26,8 +30,9 @@ const ProfilePage = () => {
         <>
         {profile ?
         <Container>
-            <h1> Name {profile.name}</h1> 
-            <h1> Email {profile.email}</h1> 
+            <h1> {profile.username}</h1> 
+         
+         
           {/* <img src={user.userImg} alt="picture user" /> */}
           <img className="userImage" src={profile.userImg} alt={profile.userImg} />
           <br></br>
@@ -36,39 +41,36 @@ const ProfilePage = () => {
 
 
           {/* <Favourites likes={store.favoriteStores}/>  */}
-            <h4> You're Favorites </h4>
+          <h4> You're Favorites </h4>
 
- <div className="container">
-  <div className="row">
-  
+          <div className="container">
+            <div className="row">
+            
 
-    {/* <br></br>
-    <div className="ContainerPicture">
-    <img src={store.storeImg} alt=" store image "></img>
+              {/* <br></br>
+              <div className="ContainerPicture">
+              <img src={store.storeImg} alt=" store image "></img>
 
-    <br></br>
-      Restaurant 2
-    </div>
+              <br></br>
+                Restaurant 2
+              </div>
 
-    <br></br>
-    <div className="ContainerPicture">
-    <img src={store.storeImg} alt=" store image "></img>
-    <br></br>
-      Restaurant 3
-    </div>
+              <br></br>
+              <div className="ContainerPicture">
+              <img src={store.storeImg} alt=" store image "></img>
+              <br></br>
+                Restaurant 3
+              </div>
 
-    <br></br>
-    <div className="ContainerPicture">
-    <img src={store.storeImg} alt=" store image "></img>
-    <br></br>
-      Restaurant 2
-    </div> */}
+              <br></br>
+              <div className="ContainerPicture">
+              <img src={store.storeImg} alt=" store image "></img>
+              <br></br>
+                Restaurant 2
+              </div> */}
 
-  </div>
-</div>  
-
-       
-
+            </div>
+          </div> 
         </Container>
         :
         <Loader />}
