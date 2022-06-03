@@ -36,12 +36,12 @@ const ProfilePage = () => {
           {/* <img src={user.userImg} alt="picture user" /> */}
           <img className="userImage" src={profile.userImg} alt={profile.userImg} />
           <br></br>
-            <a href="../ProfileEdit"><button> edit</button></a>
+            <a href="/profile-edit/:id"><button> edit</button></a>
     
 
 
           {/* <Favourites likes={store.favoriteStores}/>  */}
-          <h4> You're Favorites </h4>
+          <h4> Your Favourites </h4>
 
           <div className="container">
             <div className="row">
