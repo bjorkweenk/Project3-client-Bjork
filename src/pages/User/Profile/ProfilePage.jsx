@@ -7,13 +7,15 @@ import "./Profile.css"
 import userService from "../../../services/user.service"
 import {AuthContext} from "../../../context/auth.context"
 import Loader from "../../../components/Loader/Loader"
+import uploadService from "../../../services/upload.service"
 
 
 const ProfilePage = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user, store} = useContext(AuthContext)
 
     useEffect(()=> userService.getOneUser())
+    useEffect(() => uploadService.getUploadImage()) // bjork added 11.00
 
     return (
         <>
@@ -25,8 +27,8 @@ const ProfilePage = () => {
             <a href="../ProfileEdit"><button> edit</button></a>
     
 
-{/* 
-          <Favourites likes={favoriteStores}/> 
+
+          {/* <Favourites likes={store.favoriteStores}/>  */}
             <h4> You're Favorites </h4>
 
  <div class="container">
@@ -35,7 +37,7 @@ const ProfilePage = () => {
 
     <br></br>
     <div className="ContainerPicture">
-    <img src={storeImage} alt=" store image "></img>
+    <img src={store.storeImg} alt=" store image "></img>
 
     <br></br>
       Restaurant 2
@@ -43,20 +45,20 @@ const ProfilePage = () => {
 
     <br></br>
     <div className="ContainerPicture">
-    <img src={storeImage} alt=" store image "></img>
+    <img src={store.storeImg} alt=" store image "></img>
     <br></br>
       Restaurant 3
     </div>
 
     <br></br>
     <div className="ContainerPicture">
-    <img src={storeImage} alt=" store image "></img>
+    <img src={store.storeImg} alt=" store image "></img>
     <br></br>
       Restaurant 2
     </div>
 
   </div>
-</div>  */}
+</div>  
 
        
 

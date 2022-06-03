@@ -8,7 +8,6 @@ import "./ProfileEdit.css"
       return (
         <Container>
 
-            <img></img>
             <div> <p> Name </p></div>
             <div> <p> Tagline </p></div>
             <div> <p> E-mail</p></div>
