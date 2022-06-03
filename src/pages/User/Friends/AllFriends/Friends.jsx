@@ -29,9 +29,7 @@ const Friends= () => {
                         )
                     })
                 }
-                <SearchFriends />
-            
-                
+                <SearchFriends />              
             </Row>
             :
             <Loader />

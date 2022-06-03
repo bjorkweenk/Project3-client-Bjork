@@ -8,7 +8,7 @@ import FriendsService from "./../../../../services/friends.service.js"
 const SearchFriends= () => {
     const {user} = useContext(AuthContext)
     const [friendsData, setFriendsData] = useState(null);
-    const [friends, setFriends] = useState(null);
+    const [friends, setFriends] = useState([]);
     const [search, setSearch] = useState("");
 
     useEffect(() => {
@@ -41,14 +41,15 @@ const SearchFriends= () => {
             <form >
             <div className="form-outline">
                 <input onChange={handleSearch} value={search} type="search" id="form1" className="form-control" />
-                <label className="form-label" for="form1">Search</label>
+                <label className="form-label" for="form1"></label>
             </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary"> Search
             <i className="fas fa-search"></i>
         </button>
         </form>
-        {friends} ?
-        {
+        
+        {friendsData ?
+          
             friends.map(friend => {
                 return (
                             <Col md={{ span: 4 }} key={friend._id}>
@@ -56,10 +57,9 @@ const SearchFriends= () => {
                             </Col>
                         )
             })
-                }
-        
-            :
+           :
             <Loader />
+        }
         </div>
     )
 }
