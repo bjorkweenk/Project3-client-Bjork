@@ -5,9 +5,9 @@ import coastersService from '../../../services/coaster.service'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import Loader from '../../../components/Loader/Loader'
 
-function CoasterDetailsPage() {
+function StoreDetails() {
 
-    const [coasterDetails, setCoasterDetails] = useState()
+    const [storeDetails, setStoreDetails] = useState()
 
     const { coaster_id } = useParams()
 
