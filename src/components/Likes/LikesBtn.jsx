@@ -17,16 +17,18 @@ const LikesBtn = (props) => {
         });
       };
 
-    const handleLikes = () => {
-        
-    }
-
+    const handleLikes = (e) => {
+        e.preventDefault();
     
-
+        axios
+        .post("/")
+          .then(() => setStoresLikes(likedStores))
+          .catch((err) => console.log(err))
+    }  
 
     return (
         <div>
-            <form>
+            <form onSubmit={handleLikes}>
                 <Button onClick={addLikes}> Likes: {setLikes} </Button>  
             </form>
         </div> 
