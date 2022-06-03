@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import StoresService from './../../../services/store.service.js'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import Loader from '../../../components/Loader/Loader'
-import Favourites from "./../../../components/Favourites/Favourites"
+import LikesBtn from "../../../components/Likes/LikesBtn"
 
 function StoreDetails() {
 
@@ -36,6 +36,7 @@ function StoreDetails() {
                         <p>{storeDetails.storePhone}</p>
                         <p>{storeDetails.deliveryTime}</p>
                         <p>{storeDetails.priceRange}</p>
+                         <LikesBtn />
                     </Col>
                     {/* <Col md={{ span: 6 }}>
                         <img style={{ width: '100%' }} src={storeDetails.storeImg} alt={storeDetails.storeName} />
