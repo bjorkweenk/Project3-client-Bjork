@@ -1,6 +1,6 @@
-import { Row, Col } from "react-bootstrap"
+//import { Row, Col } from "react-bootstrap"
 import {useState, useEffect} from 'react'
-import FriendsCard from "../FriendsCard/FriendsCard"
+//import FriendsCard from "../FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
 import FriendsService from "./../../../../services/friends.service.js"
 
@@ -10,26 +10,33 @@ const SearchFriends= ({ user }) => {
 
     const handleSearch = (e) => {
        let value = e.target.value;
-       setSearchFriendData(value);
+
+       FriendsService
+       .searchNewFriends(value)
+       .then(() => {
+        setSearchFriendData(value);
+       })
     }
 
     return (
         user.length
             ?
-            <Row>
-                {
-                    user.map(friend => {
-                        return (
-                            <Col md={{ span: 4 }} key={friend._id}>
-                                <FriendsCard {...friend} />
-                            </Col>
-                        )
-                    })
-                }
-            </Row>
+        <div className="input-group">
+            <form onSubmit={handleSearch}>
+            <div className="form-outline">
+                <input type="search" id="form1" className="form-control" />
+                <label className="form-label" for="form1">Search</label>
+            </div>
+        <button type="submit" className="btn btn-primary">
+            <i className="fas fa-search"></i>
+        </button>
+        </form>
+        </div>
             :
             <Loader />
     )
 }
 
-export default SearchFriends
+export default SearchFriends;
+
+
