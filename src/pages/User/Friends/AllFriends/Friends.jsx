@@ -31,15 +31,7 @@ const Friends= () => {
                 }
                 <SearchFriends />
             
-                {
-                    friends.map(friend => {
-                        return (
-                            <Col md={{ span: 4 }} key={friend._id}>
-                                <FriendsCard friend = {friend} />
-                            </Col>
-                        )
-                    })
-                }
+                
             </Row>
             :
             <Loader />

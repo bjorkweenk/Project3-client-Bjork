@@ -17,8 +17,8 @@ class FriendsService {
         return this.app.get(`/api/user/checkfollowing/${friendId}`)
     }
 
-    searchNewFriends = (user) => {
-        return this.app.get(`/api/search/user`, user)
+    searchNewFriends = () => {
+        return this.app.get(`/api/search/users`)
     }
 
     getAllFriends = () => {
