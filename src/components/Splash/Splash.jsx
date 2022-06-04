@@ -1,3 +1,4 @@
+import React from 'react';
 import './Splash.css'
 //import { Container } from "react-bootstrap"
 

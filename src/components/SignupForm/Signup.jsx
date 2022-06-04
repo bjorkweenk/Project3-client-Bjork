@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react"
 import { Form, Button } from "react-bootstrap"
 import authService from "../../services/auth.service"
@@ -20,7 +21,7 @@ const Signup = () => {
         authService
             .signup(signupData)
             .then(res => {
-                navigate(`/profile/${res.data._id}`)
+                navigate('/login')
             })
             .catch(err => console.log(err))
     }
