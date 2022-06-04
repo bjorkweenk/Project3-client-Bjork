@@ -36,7 +36,7 @@ const ProfilePage = () => {
           {/* <img src={user.userImg} alt="picture user" /> */}
           <img className="userImage" src={profile.userImg} alt={profile.userImg} />
           <br></br>
-            <a href="/profile-edit/:id"><button> edit</button></a>
+            <a href="/profile-edit/id"><button> edit</button></a>
     
 
 

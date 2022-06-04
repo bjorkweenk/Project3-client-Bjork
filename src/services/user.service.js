@@ -6,14 +6,17 @@ class UserService {
     }
 
     getOneUser = (userId) => {
-        return this.app.get(`/api/profile/${userId}`)
+        return this.app.get(`/api/user/profile/${userId}`)
     }
 
     getAllUsers = () => {
         return this.app.get('/api/user')
     }
 
-    
+    saveUser = () => {
+        return this.app.get("/api/user/profile/:id/edit")
+    }
+
 }
 
 const userService = new UserService();
