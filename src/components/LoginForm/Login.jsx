@@ -25,7 +25,7 @@ const Loginform = () => {
             .then(({ data }) => {
                 storeToken(data.authToken)
                 authenticateUser()
-                showMessage('Welcome!! Bon Appetit!!')
+                showMessage('Welcome!! Find your new favourite restaurant!!')
                 navigate('/')
             })
             .catch(err => console.log("Unable to login: ", err))
@@ -37,6 +37,8 @@ const Loginform = () => {
     }
 
     const { password, email } = loginData
+
+    
 
     return (
 
