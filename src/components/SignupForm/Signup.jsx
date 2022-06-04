@@ -4,6 +4,7 @@ import authService from "../../services/auth.service"
 import { useNavigate } from 'react-router-dom'
 
 const Signup = () => {
+    
 
     const [signupData, setSignupData] = useState({
         username: '',
