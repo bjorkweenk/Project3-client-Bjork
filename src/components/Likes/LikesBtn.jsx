@@ -5,35 +5,27 @@ import { Button} from "react-bootstrap";
 //import { Link } from "react-router-dom";
 //import { useContext } from "react";
 import { useState } from "react";
+import React, { Component } from "react";
 
-const LikesBtn = (props) => {
+class LikesBtn extends Component {
+  state = {
+    count: 0
+  };
+  handleOnChange = (event) => {
+    this.setState({ count: this.state.count + 1 });
+  };
 
-    const [likes, setLikes] = useState(0);
-    const [likedStores, setStoresLikes] = useState(null)
-
-    const addLikes = () => {
-        let newCount = likes + 1;
-        setLikes({
-          likes: newCount
-        });
-      };
-
-    const handleLikes = (e) => {
-        e.preventDefault();
-    
-        axios
-        .post("/api/user/favourites")
-          .then(() => setStoresLikes(likedStores))
-          .catch((err) => console.log(err))
-    }  
-
+  render() {
     return (
-        <div>
-            <form onSubmit={handleLikes}>
-                <Button onClick={addLikes}> Likes: {setLikes} </Button>  
-            </form>
-        </div> 
+      <div className="div-btn">
+         <button class="heartbutton" onClick={this.handleOnChange}><div>  <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png" width={20} /> {this.state.count}</div> </button>
+       
+      </div>
     );
-    }
+  }
+}
 
 export default LikesBtn;
+
+
+
