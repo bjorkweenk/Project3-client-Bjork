@@ -59,4 +59,6 @@ const Loginform = () => {
     )
 }
 
+console.log("name")
+
 export default Loginform

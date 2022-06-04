@@ -3,24 +3,26 @@ import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../context/auth.context";
+import LikesBtn from "../../../components/Likes/LikesBtn"
 
-const StoreCard = ({ _id, imageUrl, title, owner }) => {
-  const { user } = useContext(AuthContext);
+const StoreCard = ({ store }) => {
+  //const { user } = useContext(AuthContext);
 
   return (
     <Card className="StoreCard">
-      <Card.Img variant="top" src={imageUrl} />
+      <Card.Img variant="top" src={store.storeImg} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title>{store.storeName}</Card.Title>
         <div className="d-grid gap-2">
-          <Link to={`/store-details/${_id}`} className="btn btn-dark">
+          <Link to={`/store-details/${store._id}`} className="btn btn-dark">
             See details
           </Link>
-          {owner && owner === user?._id && (
-            <Button variant="warning" onClick={() => alert("Try again")}>
-              Edit
-            </Button>
-          )}
+          <p class="card-text">{store.storeAddress}</p>
+          <p class="card-text">{store.storePhone}</p>
+          <p class="card-text">{store.deliveryTime}</p>
+          <p class="card-text">{store.priceRange}</p>
+          <p class="card-text">{store.storeLikes}</p>
+          <LikesBtn />
         </div>
       </Card.Body>
     </Card>

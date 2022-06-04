@@ -2,7 +2,7 @@ import axios from 'axios';
 
 class FriendsService {
     constructor (){
-        this.app = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}/friends` })
+        this.app = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}` })
     }
 
     followFriend = (friendId) =>{
@@ -17,8 +17,8 @@ class FriendsService {
         return this.app.get(`/api/user/checkfollowing/${friendId}`)
     }
 
-    searchNewFriends = (user) => {
-        return this.app.get(`/api/search/user`, user)
+    searchNewFriends = () => {
+        return this.app.get(`/api/user/search/users`)
     }
 
     getAllFriends = () => {

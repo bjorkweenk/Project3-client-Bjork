@@ -1,60 +1,55 @@
+<<<<<<< HEAD
 import React from 'react';
 /*
+=======
+
+>>>>>>> d0edd3096db092706dc445836ca94a77443afc35
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import coastersService from '../../../services/coaster.service'
+import StoresService from './../../../services/store.service.js'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import Loader from '../../../components/Loader/Loader'
+import LikesBtn from "../../../components/Likes/LikesBtn"
 
-function CoasterDetailsPage() {
+function StoreDetails() {
 
-    const [coasterDetails, setCoasterDetails] = useState()
+    const [storeDetails, setStoreDetails] = useState()
 
-    const { coaster_id } = useParams()
+    const { store_id } = useParams()
 
     useEffect(() => {
 
-        coastersService
-            .getOneCoaster(coaster_id)
-            .then(({ data }) => setCoasterDetails(data))
+        StoresService
+            .getStoreDetails(store_id)
+            .then(({ data }) => setStoreDetails(data))
             .catch(err => console.log(err))
 
     }, [])
 
     return (
 
-        !coasterDetails
+        !storeDetails
             ?
             <Loader />
             :
             <Container>
-                <h1>Detalles de {coasterDetails.title}</h1>
+                <h1>{storeDetails.storeName}</h1>
                 <hr />
                 <Row>
                     <Col md={{ span: 4, offset: 1 }}>
-                        <h3>Información</h3>
-                        <p>{coasterDetails.description}</p>
-                        <h3>Especificaciones</h3>
-                        <p>Longitud: {coasterDetails.length} metros</p>
-                        <p>Inversiones: {coasterDetails.inversions}</p>
+                        <p>{storeDetails.storeAddress}</p>
+                        <p>{storeDetails.storePhone}</p>
+                        <p>{storeDetails.deliveryTime}</p>
+                        <p>{storeDetails.priceRange}</p>
+                         <LikesBtn />
                     </Col>
-                    <Col md={{ span: 6 }}>
-                        <img style={{ width: '100%' }} src={coasterDetails.imageUrl} alt={coasterDetails.title} />
-                    </Col>
-                    <Link to="/galeria">
-                        <Button variant="dark">Volver</Button>
-                    </Link>
+                    {/* <Col md={{ span: 6 }}>
+                        <img style={{ width: '100%' }} src={storeDetails.storeImg} alt={storeDetails.storeName} />
+                    </Col> missing store products  */} 
                 </Row>
 
             </Container>
     )
 }
 
-export default CoasterDetailsPage
-*/
-
-export default function StoreDetails() {
-    return (
-        <h1> Store Details</h1>
-    )
-}
+export default StoreDetails;

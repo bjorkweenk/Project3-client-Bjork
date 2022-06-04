@@ -12,8 +12,6 @@ import { AuthProviderWrapper } from './context/auth.context';
 import { MessageProviderWrapper } from './context/message.context';
 
 
-
-
 ReactDOM.render(
   <Router>
     <MessageProviderWrapper>

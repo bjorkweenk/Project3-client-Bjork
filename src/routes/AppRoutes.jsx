@@ -10,6 +10,7 @@ import Signup from "../components/SignupForm/Signup";
 import SearchFriends from "../pages/User/Friends/SearchFriends/SearchFriends"
 //import PrivateRoute from "./PrivateRoute"
 
+
 const AppRoutes = () => {
   return (
     <Routes>

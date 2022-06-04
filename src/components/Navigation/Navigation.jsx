@@ -17,8 +17,10 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink to="/" className="nav-link">Profile</NavLink>
-                        <NavLink to="../../Friends" className="nav-link">Friends</NavLink>
+                        {user &&
+                        <>
+                        <NavLink to={`/profile/${user._id}`} className="nav-link">Profile</NavLink>
+                        <NavLink to="/friends" className="nav-link">Friends</NavLink>
 
                         {
                             isLoggedIn
@@ -26,14 +28,19 @@ const Navigation = () => {
                                 <div className="nav-link" onClick={logOutUser}>Logout</div>
                                 :
                                 <>
-                                    <NavLink to="/Signup" className="nav-link">Signup</NavLink>
-                                    <NavLink to="/Login" className="nav-link">Login</NavLink>
+                                    <NavLink to="/signup" className="nav-link">Signup</NavLink>
+                                    <NavLink to="/login" className="nav-link">Login</NavLink>
                                 </>
                         }
-
-                        {
-                            user && <NavLink to="/perfil" className="nav-link justify-content-end">Hola, {user.username}</NavLink>
+                        </>
                         }
+                        {!user && 
+                        <>
+                            <NavLink to="/login" className="nav-link">Login</NavLink>
+                            <NavLink to="/signup" className="nav-link">Signup</NavLink>
+                        </>
+                        }
+                        
                     </Nav>
                 </Navbar.Collapse>
             </Container>

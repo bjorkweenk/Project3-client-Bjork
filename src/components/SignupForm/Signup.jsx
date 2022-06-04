@@ -20,7 +20,7 @@ const Signup = () => {
         authService
             .signup(signupData)
             .then(res => {
-                navigate('/profile/:id')
+                navigate(`/profile/${res.data._id}`)
             })
             .catch(err => console.log(err))
     }
@@ -51,7 +51,7 @@ const Signup = () => {
                 <Form.Control type="password" onChange={handleInputChange} name="password" value={password} />
             </Form.Group>
 
-            <Button variant="dark" type="submit">Signup</Button>
+            <Button  variant="dark" type="submit">Signup</Button>
         </Form>
 
     )

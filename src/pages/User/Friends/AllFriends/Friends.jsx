@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 import FriendsCard from "../FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
 import FriendsService from "./../../../../services/friends.service.js"
+import SearchFriends from "./../SearchFriends/SearchFriends"
 
 
 const Friends= () => {
@@ -29,6 +30,7 @@ const Friends= () => {
                         )
                     })
                 }
+                <SearchFriends />              
             </Row>
             :
             <Loader />
