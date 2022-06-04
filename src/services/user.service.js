@@ -12,6 +12,8 @@ class UserService {
     getAllUsers = () => {
         return this.app.get('/api/user')
     }
+
+    
 }
 
 const userService = new UserService();
