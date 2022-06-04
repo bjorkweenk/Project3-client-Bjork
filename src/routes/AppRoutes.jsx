@@ -1,13 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import StoreDetails from "../pages/Stores/StoreDetails/StoreDetails";
-import Friends from "../pages/User/Friends/AllFriends/Friends";
+
 import Splash from "../components/Splash/Splash";
-import Login from "../components/LoginForm/Login";
+import Homepage from "./../pages/HomePage/HomePage"
+import LoginPage from "./../pages/LoginPage/LoginPage"
+import SignupPage from "./../pages/SignUpPage/SignUp"
 import ProfilePage from "../pages/User/Profile/ProfilePage";
 import ProfileEdit from "../pages/User/ProfileEdit/ProfileEdit";
-import Signup from "../components/SignupForm/Signup";
-import SearchFriends from "../pages/User/Friends/SearchFriends/SearchFriends"
+import Friends from "../pages/User/Friends/AllFriends/Friends";
+import SearchFriends from "../pages/User/Friends/SearchFriends/SearchFriends";
+import StoreDetails from "../pages/Stores/StoreDetails/StoreDetails";
+import FilteredStores from "../pages/Stores/FilteredStores/FilteredStores";
+
 //import PrivateRoute from "./PrivateRoute"
 
 
@@ -15,12 +19,13 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Splash />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/home" element={<Homepage />} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/login" element={<LoginPage/>} />
       <Route path="/friends" element={<Friends />} />
       <Route path="/search-friends" element={<SearchFriends />} />
-
-
+      <Route path="/filtered-stores" element ={<FilteredStores/>}/>
+    
       <Route path="/profile/:id" element={<ProfilePage />}/>
         <Route path="/profile-edit/:id" element={<ProfileEdit />}>
       </Route>
