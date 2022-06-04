@@ -1,9 +1,6 @@
 //import { useContext } from "react"
-<<<<<<< HEAD
 import React from 'react';
-=======
 import { useContext, useEffect, useState } from "react"
->>>>>>> d0edd3096db092706dc445836ca94a77443afc35
 import { Container } from "react-bootstrap"
 //import Favourites from "./../../../components/Favourites/Favourites"
 //import { AuthContext } from "../../../context/auth.context
@@ -31,12 +28,8 @@ const ProfilePage = () => {
     /* useEffect(() => uploadService.getUploadImage()) // bjork added 11.00 */
 
     return (
-<<<<<<< HEAD
-      <>
-=======
         <>
         {profile ?
->>>>>>> d0edd3096db092706dc445836ca94a77443afc35
         <Container>
             <h1> {profile.username}</h1> 
          
@@ -80,26 +73,6 @@ const ProfilePage = () => {
             </div>
           </div> 
         </Container>
-<<<<<<< HEAD
-    
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm" className="ContainerPicture">
-      YES
-    </div>
-    <div class="col-sm" className="ContainerPicture">
-      One of three columns
-    </div>
-    <div class="col-sm" className="ContainerPicture">
-      One of three columns
-    </div>
-  </div>
-</div>
-</>
-    )}
-=======
         :
         <Loader />}
         </>
@@ -107,7 +80,6 @@ const ProfilePage = () => {
 }
 
 
->>>>>>> d0edd3096db092706dc445836ca94a77443afc35
 
 export default ProfilePage
 

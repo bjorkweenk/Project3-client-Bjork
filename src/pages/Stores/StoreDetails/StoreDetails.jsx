@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-/*
-=======
-
->>>>>>> d0edd3096db092706dc445836ca94a77443afc35
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import StoresService from './../../../services/store.service.js'
