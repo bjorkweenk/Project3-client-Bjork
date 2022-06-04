@@ -7,6 +7,7 @@ import "./Profile.css"
 import userService from "../../../services/user.service"
 import {AuthContext} from "../../../context/auth.context"
 import Loader from "../../../components/Loader/Loader"
+import LikesBtn from "../../../components/Likes/LikesBtn"
 //import uploadService from "../../../services/upload.service"
 
 
@@ -45,6 +46,8 @@ const ProfilePage = () => {
 
           <div className="container">
             <div className="row">
+
+            <img className="userImage" src={profile.storeImg} alt={profile.storeImg} />
             
 
               {/* <br></br>
@@ -71,6 +74,8 @@ const ProfilePage = () => {
 
             </div>
           </div> 
+
+          <LikesBtn />
         </Container>
         :
         <Loader />}
