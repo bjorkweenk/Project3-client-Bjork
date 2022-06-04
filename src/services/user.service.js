@@ -17,7 +17,6 @@ class UserService {
         return this.app.get("/api/user/profile/:id/edit")
     }
 
-
 }
 
 const userService = new UserService();

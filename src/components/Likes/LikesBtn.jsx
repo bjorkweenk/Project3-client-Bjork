@@ -26,28 +26,5 @@ class LikesBtn extends Component {
 
 export default LikesBtn;
 
-/*  const LikesBtn = (props) => {
 
-    const [likes, setLikes] = useState(0);
-    // const [likedStores, setStoresLikes] = useState(null)
-
-    const addLikes = () => {
-        let newCount = likes + 1;
-        setLikes({
-          likes: newCount
-        });
-      };
-
-     const handleLikes = () => {
-       
-    }  
-
-    return (
-        <div>
-            <form>
-                <Button onClick={addLikes}> likes :{setLikes} 0</Button>  
-            </form>
-        </div> 
-    );
-    }  */
 
