@@ -24,7 +24,7 @@ const Navigation = () => {
                         {
                             isLoggedIn
                                 ?
-                                <div className="nav-link" onClick={logOutUser}>Logout</div>
+                              <a href="/"> <div className="nav-link" onClick={logOutUser}>Logout</div></a> 
                                 :
                                 <>
                                     <NavLink to="/signup" className="nav-link">Signup</NavLink>

@@ -43,7 +43,7 @@ const ProfilePage = () => {
           <h5 className="userName"> {profile.username}</h5> 
           <br></br>
           
-            <a href="/profile-edit/id"><button class="editBtn"> edit</button></a>
+            <a href={`/profile-edit/${profile._id}`}><button class="editBtn"> edit</button></a>
             </div>
             </div>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react'
 import StoresService from "../../../services/store.service.js"
 import StoreCard from "../../../components/StoreCard/StoreCard"
-import Loader from "../../../../components/Loader/Loader"
+import Loader from "../../../components/Loader/Loader"
 import { Row, Col } from "react-bootstrap"
 
 
