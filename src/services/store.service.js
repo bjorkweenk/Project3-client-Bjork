@@ -18,9 +18,9 @@ class StoreService {
 
     }
 
-    // this is to get the details of one store
-    getStoreDetails = (id) => {
-        return this.app.get(`/api/store/store-details/${id}`)
+    // To get the details of one store
+    getStoreDetails = (storeId) => {
+        return this.app.get(`/api/store/${storeId}`)
     }
 
     // this is to get the stores the user liked in order to render in the user profile
@@ -29,18 +29,19 @@ class StoreService {
     
     } */
 
-    // get the stores filtered by friends likes
+    // To get the liked stores filtered by user's friends
     getStoresFriends = () => {
         return this.app.get('/api/store/friends-store')
     }
 
+    // To get all the cuisine types
     getAllCuisines = (type) => {
         return this.app.get(`/api/store/cuisine-types`)
     }
  
-    // get the stores filtered by cuisine
+    // To get the stores filtered by cuisine
     getStoresByCuisine =() =>{
-        return this.app.get('/api/store/cuisine-results')
+        return this.app.get('/api/store/by-cuisine-type/:cuisineType')
     }
 }
 
