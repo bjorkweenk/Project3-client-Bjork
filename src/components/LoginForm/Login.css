@@ -1,5 +1,8 @@
-/*
-.login{
-
+.text {
+    color: white; 
 }
-*/
+
+.container {
+    text-align: center;
+    width: 100vh;
+  }

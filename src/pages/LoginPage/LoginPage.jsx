@@ -8,8 +8,6 @@ const LoginPage = () => {
         <Container>
             <Row>
                 <Col md={{ span: 6, offset: 3 }}>
-                    <h1>Login</h1>
-                    <hr />
                     <Loginform />
 
                 </Col>
