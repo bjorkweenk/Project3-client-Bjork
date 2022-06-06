@@ -1,8 +1,21 @@
 import axios from 'axios';
 
 class StoreService {
+
     constructor (){
         this.app = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}` })
+
+        this.app.interceptors.request.use((config) => {
+
+            const storedToken = localStorage.getItem("authToken");
+
+            if (storedToken) {
+                config.headers = { Authorization: `Bearer ${storedToken}` }
+            }
+
+            return config
+        })
+
     }
 
     // this is to get the details of one store
@@ -22,7 +35,7 @@ class StoreService {
     }
 
     getAllCuisines = (type) => {
-        return this.app.get(`/api/store/cuisine/${type}`)
+        return this.app.get(`/api/store/cuisine-types`)
     }
  
     // get the stores filtered by cuisine
