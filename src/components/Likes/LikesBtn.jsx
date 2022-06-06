@@ -1,4 +1,3 @@
-import React from 'react';
 import "./LikesBtn.css";
 import axios from "axios"
 import { Button} from "react-bootstrap";

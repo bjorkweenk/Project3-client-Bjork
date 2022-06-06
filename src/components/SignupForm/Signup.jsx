@@ -35,25 +35,33 @@ const Signup = () => {
 
     return (
 
-        <Form onSubmit={handleSubmit}>
+        <>
+            
+        <div class="background"> 
+    <div> <img class="logo" src="/logo.jpg"/></div>
+
+        <Form className="formLogging" onSubmit={handleSubmit}>
 
             <Form.Group className="mb-3" controlId="username">
-                <Form.Label>Username</Form.Label>
-                <Form.Control type="text" onChange={handleInputChange} name="username" value={username} />
+                <Form.Label className="text1">Username</Form.Label>
+                <Form.Control type="text" onChange={handleInputChange} name="username" placeholder="username" value={username} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" onChange={handleInputChange} name="email" value={email} />
+                <Form.Label className="text1">Email</Form.Label>
+                <Form.Control type="email" onChange={handleInputChange} name="email" placeholder="email" value={email} />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" onChange={handleInputChange} name="password" value={password} />
+                <Form.Label className="text1">Password</Form.Label>
+                <Form.Control type="password" onChange={handleInputChange} name="password" placeholder="password" value={password} />
             </Form.Group>
 
-            <Button  variant="dark" type="submit">Signup</Button>
+            <button className="button1"  variant="dark" type="submit">Signup</button>
         </Form>
+
+        </div>   
+        </>
 
     )
 }

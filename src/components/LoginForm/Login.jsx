@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext, useState } from "react"
-import { Form, Button } from "react-bootstrap"
+import { Form } from "react-bootstrap"
 import authService from "../../services/auth.service"
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/auth.context'
@@ -45,30 +45,26 @@ const Loginform = () => {
     return (
 
         <>
-            <div class="container">
-                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" width={400} height={400} />
-                <img src="https://files.slack.com/files-pri/T02CQ4EN4-F03J71R9KQE/image_from_ios.jpg"/>
-                <div class="text">
-                </div>
-                
-            </div>
+            
+        <div class="background"> 
+    <div> <img class="logo" src="/logo.jpg"/></div>
+          
 
-            <Form onSubmit={handleSubmit}>
-
+            <Form className="formLogging" onSubmit={handleSubmit}>
                 <Form.Group className="login" controlId="email">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" onChange={handleInputChange} name="email" value={email} />
+                    <Form.Label className="text1">Email</Form.Label>
+                    <Form.Control type="email" onChange={handleInputChange} name="email" value={email} placeholder="email" />
                 </Form.Group>
 
                 <Form.Group className="login" controlId="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" onChange={handleInputChange} name="password" value={password} />
+                    <Form.Label className="text1">Password</Form.Label>
+                    <Form.Control type="password" onChange={handleInputChange} name="password" value={password} placeholder="password" />
                 </Form.Group>
 
-                <Button variant="dark" type="submit">Log in</Button>
+                <button className="button1" type="submit">Log in</button>
             </Form>
 
-
+            </div>   
         </>
 
     )
