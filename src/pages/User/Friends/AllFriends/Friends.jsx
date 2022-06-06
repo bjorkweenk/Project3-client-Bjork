@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap"
 import {useState, useEffect} from 'react'
-import FriendsCard from "../FriendsCard/FriendsCard"
+import FriendsCard from "../../../../components/FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
 import FriendsService from "./../../../../services/friends.service.js"
-import SearchFriends from "./../SearchFriends/SearchFriends"
+import SearchFriends from "../../../../components/SearchFriends/SearchFriends"
 
 
 const Friends= () => {
@@ -17,8 +17,15 @@ const Friends= () => {
         .then((apiFriends) => setFriends(apiFriends))
     }, [])
 
+    
+
     return (
-        friends
+        <>
+        <div>
+            <SearchFriends />
+        </div>
+        <div>
+        {friends
             ?
             <Row>
                 {
@@ -29,11 +36,12 @@ const Friends= () => {
                             </Col>
                         )
                     })
-                }
-                <SearchFriends />              
+                }             
             </Row>
             :
-            <Loader />
+            <Loader />}
+            </div>
+            </>
     )
 }
 

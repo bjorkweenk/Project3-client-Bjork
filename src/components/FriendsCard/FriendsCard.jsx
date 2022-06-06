@@ -4,9 +4,9 @@ import FriendsCardStyle from "./FriendsCardStyle.css";
 import { Card, Button, Form } from "react-bootstrap";
 import {Link } from 'react-router-dom'
 import { React, useContext, useState, useEffect } from "react";
-import { AuthContext } from "../../../../context/auth.context.js";
-import FriendService from "../../../../services/friends.service";
-import FollowBtn from "../../../../components/FollowBtn/FollowBtn";
+import { AuthContext } from "../../context/auth.context.js";
+import FriendService from "../../services/friends.service.js";
+import FollowBtn from "../FollowBtn/FollowBtn";
 
 const FriendsCard = ({ friend }) => {
 
@@ -24,9 +24,9 @@ const FriendsCard = ({ friend }) => {
     <Card className="friendsCard">
       <Card.Img variant="top" src={friend.userImg} />
       <Card.Body>
-        <Card.Title>{friend.username}</Card.Title>
+        <a href={`/profile/${friend._id}`}><Card.Title>{friend.username}</Card.Title></a>
+
         <div className="d-grid gap-2">
-          <Link to={`/profile/${friend._id}`} className="btn btn-dark"></Link>
           <FollowBtn friend={friend}/>
           
         </div>

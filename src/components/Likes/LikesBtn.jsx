@@ -5,12 +5,13 @@ import { Button} from "react-bootstrap";
 //import { Link } from "react-router-dom";
 //import { useContext } from "react";
 import { useState } from "react";
-import React, { Component } from "react";
+import  { Component } from "react";
 
 class LikesBtn extends Component {
   state = {
-    count: 0
+    count: 0,
   };
+  
   handleOnChange = (event) => {
     this.setState({ count: this.state.count + 1 });
   };
