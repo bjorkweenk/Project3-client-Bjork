@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap"
 import {useState, useEffect, useContext} from 'react'
-import FriendsCard from "../../pages/User/Friends/FriendsCard/FriendsCard"
+import FriendsCard from "../../components/FriendsCard/FriendsCard"
 import Loader from "../Loader/Loader"
 import { AuthContext } from '../../context/auth.context'
 import FriendsService from "../../services/friends.service.js"

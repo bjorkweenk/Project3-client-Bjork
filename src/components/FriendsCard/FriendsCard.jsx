@@ -4,9 +4,9 @@ import FriendsCardStyle from "./FriendsCardStyle.css";
 import { Card, Button, Form } from "react-bootstrap";
 import {Link } from 'react-router-dom'
 import { React, useContext, useState, useEffect } from "react";
-import { AuthContext } from "../../../../context/auth.context.js";
-import FriendService from "../../../../services/friends.service";
-import FollowBtn from "../../../../components/FollowBtn/FollowBtn";
+import { AuthContext } from "../../context/auth.context.js";
+import FriendService from "../../services/friends.service.js";
+import FollowBtn from "../FollowBtn/FollowBtn";
 
 const FriendsCard = ({ friend }) => {
 
