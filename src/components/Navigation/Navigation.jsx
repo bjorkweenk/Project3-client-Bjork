@@ -11,7 +11,7 @@ const Navigation = () => {
     const { user, logOutUser, isLoggedIn } = useContext(AuthContext)
 
     return (
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar expand="lg">
             <Container>
                 <Navbar.Brand href="#home">Sharelicious!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
