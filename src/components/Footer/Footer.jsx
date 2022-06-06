@@ -1,5 +1,14 @@
 import React from 'react';
 import './Footer.css'
-const Footer = () => <footer>All rights reserved</footer>
+
+
+const Footer = () => {
+    return (
+        <>
+         <footer> All rights served </footer>
+        </>
+      );
+    }
+
 
 export default Footer

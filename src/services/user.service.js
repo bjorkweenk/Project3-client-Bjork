@@ -6,7 +6,7 @@ class UserService {
     }
 
     getOneUser = (userId) => {
-        return this.app.get(`/api/user/profile/${userId}`)
+        return this.app.get(`/api/profile/${userId}`)
     }
 
     getAllUsers = () => {

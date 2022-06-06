@@ -8,7 +8,7 @@ import SignupPage from "./../pages/SignUpPage/SignUp"
 import ProfilePage from "../pages/User/Profile/ProfilePage";
 import ProfileEdit from "../pages/User/ProfileEdit/ProfileEdit";
 import Friends from "../pages/User/Friends/AllFriends/Friends";
-import SearchFriends from "../pages/User/Friends/SearchFriends/SearchFriends";
+import SearchFriends from "../components/SearchFriends/SearchFriends";
 import StoreDetails from "../pages/Stores/StoreDetails/StoreDetails";
 import FilteredStores from "../pages/Stores/FilteredStores/FilteredStores";
 
