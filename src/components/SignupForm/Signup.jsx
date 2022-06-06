@@ -1,8 +1,10 @@
 import React from 'react';
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Form, Button } from "react-bootstrap"
 import authService from "../../services/auth.service"
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../context/auth.context'
+import { MessageContext } from '../../context/message.context'
 
 const Signup = () => {
     
@@ -15,13 +17,19 @@ const Signup = () => {
 
     const navigate = useNavigate()
 
+    const { storeToken, authenticateUser } = useContext(AuthContext)
+    const { showMessage } = useContext(MessageContext)
+
     const handleSubmit = e => {
         e.preventDefault()
 
         authService
             .signup(signupData)
-            .then(res => {
-                navigate('/login')
+            .then(({ data }) => {
+                storeToken(data.authToken)
+                authenticateUser()
+                showMessage('Welcome!! Find your new favourite restaurant!!')
+                navigate('/home')
             })
             .catch(err => console.log(err))
     }
