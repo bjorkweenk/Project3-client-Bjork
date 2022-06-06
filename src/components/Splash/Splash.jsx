@@ -8,7 +8,7 @@ const Splash = () => {
     return (
         <>
     
-      <section> </section>
+      <div class="jumbotron"> </div>
 
 <div className="sectionConnect">
 <h2 className="connect"> Connect  </h2>    

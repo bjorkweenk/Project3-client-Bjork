@@ -3,6 +3,18 @@ import axios from 'axios';
 class FriendsService {
     constructor (){
         this.app = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}` })
+
+        this.app.interceptors.request.use((config) => {
+
+            const storedToken = localStorage.getItem("authToken");
+
+            if (storedToken) {
+                config.headers = { Authorization: `Bearer ${storedToken}` }
+            }
+
+            return config
+        })
+
     }
 
     followFriend = (friendId) =>{
@@ -19,6 +31,7 @@ class FriendsService {
 
     searchNewFriends = () => {
         return this.app.get(`/api/user/search/users`)
+        .then(response => (response.data))
     }
 
     getAllFriends = () => {

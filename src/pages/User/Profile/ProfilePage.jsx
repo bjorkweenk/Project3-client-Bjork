@@ -32,23 +32,29 @@ const ProfilePage = () => {
         <>
         {profile ?
         <Container>
-            <h1> {profile.username}</h1> 
+           
          
          
           {/* <img src={user.userImg} alt="picture user" /> */}
+          <div class="contentUser"> 
           <img className="userImage" src={profile.userImg} alt={profile.userImg} />
+         
+         <div className="contentEdit">
+          <h5 className="userName"> {profile.username}</h5> 
           <br></br>
-            <a href="/profile-edit/id"><button> edit</button></a>
-    
+          
+            <a href="/profile-edit/id"><button class="editBtn"> edit</button></a>
+            </div>
+            </div>
 
 
           {/* <Favourites likes={store.favoriteStores}/>  */}
-          <h4> Your Favourites </h4>
+          <h3 className="title2"> Your Favourites </h3>
 
           <div className="container">
             <div className="row">
 
-            <img className="userImage" src={profile.storeImg} alt={profile.storeImg} />
+            <img className="storeImage" src={profile.storeImg} alt={profile.storeImg} />
             
 
               {/* <br></br>

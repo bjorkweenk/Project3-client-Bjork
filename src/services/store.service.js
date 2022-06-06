@@ -21,8 +21,8 @@ class StoreService {
         return this.app.get('/api/store/friends-store')
     }
 
-    getAllCuisines = () => {
-        return this.app.get('/api/store/cuisine/:type')
+    getAllCuisines = (type) => {
+        return this.app.get(`/api/store/cuisine/${type}`)
     }
  
     // get the stores filtered by cuisine
