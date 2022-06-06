@@ -8,9 +8,10 @@ import SignupPage from "./../pages/SignUpPage/SignUp"
 import ProfilePage from "../pages/User/Profile/ProfilePage";
 import ProfileEdit from "../pages/User/ProfileEdit/ProfileEdit";
 import Friends from "../pages/User/Friends/AllFriends/Friends";
-import SearchFriends from "../components/SearchFriends/SearchFriends";
+//import SearchFriends from "../components/SearchFriends/SearchFriends";
 import StoreDetails from "../pages/Stores/StoreDetails/StoreDetails";
 import FilteredStores from "../pages/Stores/FilteredStores/FilteredStores";
+import LikedStores from "../pages/User/LikedStores/LikedStores"
 
 //import PrivateRoute from "./PrivateRoute"
 
@@ -23,7 +24,9 @@ const AppRoutes = () => {
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/login" element={<LoginPage/>} />
       <Route path="/friends" element={<Friends />} />
-      <Route path="/search-friends" element={<SearchFriends />} />
+      <Route path="/liked-stores" element={<LikedStores />} />
+
+      {/* <Route path="/search-friends" element={<SearchFriends />} /> */}
       <Route path="/filtered-stores" element ={<FilteredStores/>}/>
     
       <Route path="/profile/:id" element={<ProfilePage />}/>
