@@ -24,9 +24,9 @@ const FriendsCard = ({ friend }) => {
     <Card className="friendsCard">
       <Card.Img variant="top" src={friend.userImg} />
       <Card.Body>
-        <Card.Title>{friend.username}</Card.Title>
+        <a href={`/profile/${friend._id}`}><Card.Title>{friend.username}</Card.Title></a>
+
         <div className="d-grid gap-2">
-          <Link to={`/profile/${friend._id}`} className="btn btn-dark"></Link>
           <FollowBtn friend={friend}/>
           
         </div>

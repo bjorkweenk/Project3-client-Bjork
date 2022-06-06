@@ -2,8 +2,8 @@ import "./StoreCard.css";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../../../context/auth.context";
-import LikesBtn from "../../../components/Likes/LikesBtn"
+import { AuthContext } from "../../context/auth.context";
+import LikesBtn from "../Likes/LikesBtn"
 
 const StoreCard = ({ store }) => {
   //const { user } = useContext(AuthContext);

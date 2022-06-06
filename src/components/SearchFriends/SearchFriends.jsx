@@ -1,10 +1,10 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap"
 import {useState, useEffect, useContext} from 'react'
-import FriendsCard from "../FriendsCard/FriendsCard"
-import Loader from "../../../../components/Loader/Loader"
-import { AuthContext } from '../../../../context/auth.context'
-import FriendsService from "./../../../../services/friends.service.js"
+import FriendsCard from "../../pages/User/Friends/FriendsCard/FriendsCard"
+import Loader from "../Loader/Loader"
+import { AuthContext } from '../../context/auth.context'
+import FriendsService from "../../services/friends.service.js"
 
 const SearchFriends= () => {
     const {user} = useContext(AuthContext)
