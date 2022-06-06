@@ -12,7 +12,7 @@ export default function FollowBtn ({friend}) {
     useEffect(() => {
         FriendService.checkIfFollowing(friend._id)
         .then((response)=>{
-            if(response) setIsFollowing(true)
+            if(response.data === 'false') setIsFollowing(true)
         })
         .catch((error) => console.log(error))
     })
@@ -37,22 +37,22 @@ export default function FollowBtn ({friend}) {
 
     return(
         <>
-        {isFollowing}?
-          {
+        {isFollowing?
+          
             <Form onSubmit={handleUnfollow}>
               <Button variant="dark" type="submit" className="friendsBtn">
                 Unfollow
               </Button>
             </Form>
-          }
+          
           :
-          {
+          
             <Form onSubmit={handleFollow}>
               <Button variant="dark" type="submit" className="friendsBtn">
                 Follow
               </Button>
             </Form>
-          }
+        }
           </>
     )
 }
