@@ -57,7 +57,10 @@ const Friends= () => {
             </Row>
             :
             <Loader />}
+
+
             </div>
+            <a href="/home"> <button> go back  </button></a>
             </>
     )
 }

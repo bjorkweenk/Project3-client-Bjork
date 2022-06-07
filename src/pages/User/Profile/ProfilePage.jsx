@@ -77,8 +77,16 @@ const ProfilePage = () => {
               <br></br>
                 Restaurant 2
               </div> */}
-            </div>
+            </div>        
+            </div> 
+
+       
+
+          <LikesBtn />
+
+          <a href="/home"> <button> go back  </button></a>
           </div>
+
         </Container>
       ) : (
         <Loader />

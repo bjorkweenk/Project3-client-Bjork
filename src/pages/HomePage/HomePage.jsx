@@ -125,7 +125,7 @@ const HomePage = (props) => {
         </div>
 
         <div class="cuisinetype">
-          <img class="gyoza" src="/meditareannn.png" width={100} height={100} />
+          <img class="meditareann" src="/meditareannn.png" width={100} height={100} />
           <p> Meditaranean</p>
         </div>
       </div>
