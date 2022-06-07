@@ -19,7 +19,7 @@ class LikesBtn extends Component {
   render() {
     return (
       <div className="div-btn">
-         <button class="heartbutton" onClick={this.handleOnChange}><div>  <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png" width={20} /> {this.state.count}</div> </button>
+         <button className="heartbutton" onClick={this.handleOnChange}><div>  <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png" width={20} /> {this.state.count}</div> </button>
        
       </div>
     );
