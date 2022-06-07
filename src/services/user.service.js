@@ -13,10 +13,12 @@ class UserService {
         return this.app.get('/api/user')
     }
 
-    saveUser = () => {
-        return this.app.get("/api/user/profile/:id/edit")
+    saveUser = (userId, username, tagLine, email) => {
+        console.log(userId)
+        return this.app.post(`/api/user/profile/${userId}/edit`, {username: username, tagLine:tagLine, email:email})
+       
     }
-
+    
 }
 
 const userService = new UserService();
