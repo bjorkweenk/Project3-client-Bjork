@@ -8,15 +8,8 @@ import { AuthContext } from "../../context/auth.context.js";
 import FriendService from "../../services/friends.service.js";
 import FollowBtn from "../FollowBtn/FollowBtn";
 
-const FriendsCard = ({ friend }) => {
 
-
- /*  useEffect(() => {
-    FriendService.followFriend(user);
-    setIsFollowing(false);
-  }, []); */
-
- 
+const FriendsCard = ({ friend, addFriends, setFollowing }) => {
 
   const { user } = useContext(AuthContext)
    
@@ -27,7 +20,7 @@ const FriendsCard = ({ friend }) => {
         <a href={`/profile/${friend._id}`}><Card.Title>{friend.username}</Card.Title></a>
 
         <div className="d-grid gap-2">
-          <FollowBtn friend={friend}/>
+          <FollowBtn friend={friend} addFriends={addFriends} setFollowing= {setFollowing}/>
           
         </div>
       </Card.Body>
