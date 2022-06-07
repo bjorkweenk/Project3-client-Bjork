@@ -16,7 +16,7 @@ function StoreDetails() {
 
         StoresService
             .getStoreDetails(store_id)
-            .then(({ data }) => setStoreDetails(data))
+            .then(({ data }) => {setStoreDetails(data); console.log("store details" , data)})
             .catch(err => console.log(err))
 
     }, [])
