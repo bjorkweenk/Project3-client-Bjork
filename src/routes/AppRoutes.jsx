@@ -33,7 +33,7 @@ const AppRoutes = () => {
         <Route path="/profile-edit/:id" element={<ProfileEdit />}>
       </Route>
 
-      <Route path="/store-details/:id" element={<StoreDetails />} />
+      <Route path="/store-details/:storeId" element={<StoreDetails />} />
 
       <Route path="*" element={<h1>Oops!! There was en error</h1>} />
     </Routes>

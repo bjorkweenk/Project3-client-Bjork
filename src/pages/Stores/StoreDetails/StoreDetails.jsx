@@ -6,37 +6,44 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 import Loader from '../../../components/Loader/Loader'
 import LikesBtn from "../../../components/Likes/LikesBtn"
 
+
+
+
 function StoreDetails() {
 
-    const [storeDetails, setStoreDetails] = useState()
+    const [storeDetails, setStoreDetails] = useState(null)
 
-    const { store_id } = useParams()
+    const { storeId } = useParams()
 
     useEffect(() => {
 
         StoresService
-            .getStoreDetails(store_id)
-            .then(({ data }) => {setStoreDetails(data); console.log("store details" , data)})
+
+            .getStoreDetails(storeId)
+            .then((response) => {
+                setStoreDetails(response.data)})
+
             .catch(err => console.log(err))
 
     }, [])
 
     return (
 
-        !storeDetails
+        storeDetails
             ?
-            <Loader />
-            :
             <Container>
                 <h1>{storeDetails.storeName}</h1>
                 <hr />
                 <Row>
                     <Col md={{ span: 4, offset: 1 }}>
-                        <p>{storeDetails.storeAddress}</p>
-                        <p>{storeDetails.storePhone}</p>
-                        <p>{storeDetails.deliveryTime}</p>
-                        <p>{storeDetails.priceRange}</p>
-                         <LikesBtn />
+                        <img src={storeDetails.storeImg} alt='store-img'/>
+                        <LikesBtn />
+                        <a href={storeDetails.storeAddress} target='_blank'>See location</a>
+                        <p>Phone: {storeDetails.storePhone}</p>
+                        <p>Delivery time: {storeDetails.deliveryTime}</p>
+                        <p>Price range: {storeDetails.priceRange}</p>
+                        <a href={storeDetails.deliveryOptions} target='_blank'>Delivery Option</a>
+
                     </Col>
                     {/* <Col md={{ span: 6 }}>
                         <img style={{ width: '100%' }} src={storeDetails.storeImg} alt={storeDetails.storeName} />
@@ -44,6 +51,10 @@ function StoreDetails() {
                 </Row>
 
             </Container>
+
+            :
+
+            <Loader />
     )
 }
 
