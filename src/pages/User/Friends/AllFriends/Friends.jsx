@@ -10,14 +10,31 @@ import SearchFriends from "../../../../components/SearchFriends/SearchFriends"
 const Friends= () => {
 
     const [friends, setFriends] = useState(null);
+    const [following, setFollowing] = useState (null)
 
     useEffect(() => {
         FriendsService
         .getAllFriends()
-        .then((apiFriends) => setFriends(apiFriends))
+        .then((apiFriends) => {
+            console.log(apiFriends.data)
+            setFriends(apiFriends.data)
+        })
     }, [])
 
-    
+    useEffect(() => {
+        FriendsService
+        .getAllFriends()
+        .then((apiFriends) => {
+            console.log(apiFriends.data)
+            setFriends(apiFriends.data)
+        })
+    }, [following])
+
+
+    function addFriends(newFriend) {
+        setFriends([...friends, newFriend])
+    }
+
 
     return (
         <>
@@ -32,7 +49,7 @@ const Friends= () => {
                     friends.map(friend => {
                         return (
                             <Col md={{ span: 4 }} key={friend._id}>
-                                <FriendsCard friend = {friend} />
+                                <FriendsCard friend = {friend} addFriends={addFriends} setFollowing= {setFollowing}/>
                             </Col>
                         )
                     })
@@ -40,7 +57,10 @@ const Friends= () => {
             </Row>
             :
             <Loader />}
+
+
             </div>
+            <a href="/home"> <button> go back  </button></a>
             </>
     )
 }
