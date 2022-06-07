@@ -14,8 +14,15 @@ const Friends= () => {
     useEffect(() => {
         FriendsService
         .getAllFriends()
-        .then((apiFriends) => setFriends(apiFriends))
+        .then((apiFriends) => {
+            console.log(apiFriends.data)
+            setFriends(apiFriends.data)
+        })
     }, [])
+
+    function addFriends(newFriend) {
+        setFriends([...friends, newFriend])
+    }
 
     
 
@@ -32,7 +39,7 @@ const Friends= () => {
                     friends.map(friend => {
                         return (
                             <Col md={{ span: 4 }} key={friend._id}>
-                                <FriendsCard friend = {friend} />
+                                <FriendsCard friend = {friend} addFriends={addFriends}/>
                             </Col>
                         )
                     })
