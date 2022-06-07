@@ -83,7 +83,11 @@ const ProfilePage = () => {
             </div>
           </div> 
 
+       
+
           <LikesBtn />
+
+          <a href="/home"> <button> go back  </button></a>
         </Container>
         :
         <Loader />}
