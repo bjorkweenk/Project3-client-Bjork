@@ -14,7 +14,7 @@ export default function LikedStores (props){
         StoresService 
         .getStoresLiked(props.storeId)
         .then((res) => setStoresLiked(res))
-    }, [])
+    }, [props.storeId])
 
 
 
