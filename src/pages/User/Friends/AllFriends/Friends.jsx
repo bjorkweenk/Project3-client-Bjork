@@ -10,6 +10,7 @@ import SearchFriends from "../../../../components/SearchFriends/SearchFriends"
 const Friends= () => {
 
     const [friends, setFriends] = useState(null);
+    const [following, setFollowing] = useState (null)
 
     useEffect(() => {
         FriendsService
@@ -20,11 +21,20 @@ const Friends= () => {
         })
     }, [])
 
+    useEffect(() => {
+        FriendsService
+        .getAllFriends()
+        .then((apiFriends) => {
+            console.log(apiFriends.data)
+            setFriends(apiFriends.data)
+        })
+    }, [following])
+
+
     function addFriends(newFriend) {
         setFriends([...friends, newFriend])
     }
 
-    
 
     return (
         <>
@@ -39,7 +49,7 @@ const Friends= () => {
                     friends.map(friend => {
                         return (
                             <Col md={{ span: 4 }} key={friend._id}>
-                                <FriendsCard friend = {friend} addFriends={addFriends}/>
+                                <FriendsCard friend = {friend} addFriends={addFriends} setFollowing= {setFollowing}/>
                             </Col>
                         )
                     })

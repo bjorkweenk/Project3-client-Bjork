@@ -5,7 +5,7 @@ import { React, useContext, useState, useEffect } from "react";
 //import { AuthContext } from "../../../../context/auth.context.js";
 import FriendService from "./../../services/friends.service"
 
-export default function FollowBtn ({friend, addFriends}) {
+export default function FollowBtn ({friend, addFriends, setFollowing}) {
 
     const [isFollowing, setIsFollowing] = useState(null);
     
@@ -25,6 +25,7 @@ export default function FollowBtn ({friend, addFriends}) {
         FriendService.followFriend(friend._id)
           .then(() => {
             setIsFollowing(true)
+            setFollowing(true)
             addFriends(friend)
           })
           .catch((err) => console.log("Unable to stablish the relationship", err))
@@ -34,7 +35,8 @@ export default function FollowBtn ({friend, addFriends}) {
         e.preventDefault();
     
         FriendService.unfollowFriend (friend._id)
-          .then(() => setIsFollowing(false))
+          .then(() => {setIsFollowing(false); setFollowing(false)})
+  
           .catch((err) => console.log("Unable to break the relationship", err));
       };
 
