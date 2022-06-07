@@ -1,3 +1,4 @@
+import React from "react";
 import "./StoreCard.css";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
