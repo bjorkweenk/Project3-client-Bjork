@@ -1,62 +1,60 @@
-//import { useContext } from "react"
-import React from 'react';
-import { useContext, useEffect, useState } from "react"
-import { Container } from "react-bootstrap"
-//import Favourites from "./../../../components/Favourites/Favourites"
-//import { AuthContext } from "../../../context/auth.context
-import "./Profile.css"
-import userService from "../../../services/user.service"
-import {AuthContext} from "../../../context/auth.context"
-import Loader from "../../../components/Loader/Loader"
-import LikesBtn from "../../../components/Likes/LikesBtn"
-//import uploadService from "../../../services/upload.service"
-
+import "./Profile.css";
+import React from "react";
+import { useContext, useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
+import userService from "../../../services/user.service";
+import { AuthContext } from "../../../context/auth.context";
+import Loader from "../../../components/Loader/Loader";
 
 const ProfilePage = () => {
+  const { user } = useContext(AuthContext);
+  const [profile, setProfile] = useState(null);
 
-    const {user} = useContext(AuthContext)
-    
-    const [profile, setProfile] = useState(null)
-
-    useEffect(() => {
-      if(user) {
-        userService.getOneUser(user._id)
-        .then(response => {
-          setProfile(response.data)
+  useEffect(() => {
+    if (user) {
+      userService
+        .getOneUser(user._id)
+        .then((response) => {
+          setProfile(response.data);
         })
-        .catch(err => console.log(err));
+        .catch((error) =>(error));
     }
-    }, [user])
-    /* useEffect(() => uploadService.getUploadImage()) // bjork added 11.00 */
+  }, [user]);
 
-    return (
-        <>
-        {profile ?
+  return (
+    <>
+      {profile ? (
         <Container>
-           
-         
-         
-          {/* <img src={user.userImg} alt="picture user" /> */}
-          <div class="contentUser"> 
-          <img className="userImage" src={profile.userImg} alt={profile.userImg} />
-         
-         <div className="contentEdit">
-          <h5 className="userName"> {profile.username}</h5> 
-          <br></br>
-          
-            <a href={`/profile-edit/${profile._id}`}><button class="editBtn"> edit</button></a>
-            </div>
-            </div>
+          <div class="contentUser">
+            <img
+              className="userImage"
+              src={profile.userImg}
+              alt={profile.userImg}
+            />
+          </div>
+          <div className="contentEdit">
+            <h5 className="userName"> {profile.username}</h5>
+            <br></br>
+            <div className="contentEdit">
+              <p className="tagLine"> {profile.tagLine}</p>
+              <br></br>
 
+              <a href={`/profile-edit/${profile._id}`}>
+                <button class="editBtn"> edit</button>
+              </a>
+            </div>
+          </div>
 
           {/* <Favourites likes={store.favoriteStores}/>  */}
           <h3 className="title2"> Your Favourites </h3>
 
           <div className="container">
             <div className="row">
-
-            <img className="storeImage" src={profile.storeImg} alt={profile.storeImg} />
-            
+              <img
+                className="storeImage"
+                src={profile.storeImg}
+                alt={profile.storeImg}
+              />
 
               {/* <br></br>
               <div className="ContainerPicture">
@@ -79,24 +77,24 @@ const ProfilePage = () => {
               <br></br>
                 Restaurant 2
               </div> */}
-
-            </div>
-          </div> 
+            </div>        
+            </div> 
 
        
 
           <LikesBtn />
 
           <a href="/home"> <button> go back  </button></a>
+          </div>
+
         </Container>
-        :
-        <Loader />}
-        </>
-    )
-}
+      ) : (
+        <Loader />
+      )}
+    </>
+  );
+};
+
+export default ProfilePage;
 
 
-
-export default ProfilePage
-
-// question mark in username
