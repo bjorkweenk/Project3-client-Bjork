@@ -1,13 +1,12 @@
 import React from 'react';
-import { Container } from "react-bootstrap"
 import "./ProfileEdit.css"
-import { useState, useContext} from "react"
-import { Form, Button } from "react-bootstrap"
+import { useState, useContext, useEffect} from "react"
+import { Form } from "react-bootstrap"
 import userService from "../../../services/user.service"
 import uploadService from "../../../services/upload.service"
 import { useNavigate, useParams } from "react-router-dom";
 import {AuthContext} from "../../../context/auth.context"
-import { useEffect } from 'react';
+
 
 
 const ProfileEdit = () => {
@@ -16,8 +15,6 @@ const ProfileEdit = () => {
     const {user} = useContext(AuthContext)
 
     const {id} = useParams()
-
-    console.log("this is user", user)
 
     const [profileData, setProfileData] = useState({
         user: id,
@@ -31,7 +28,6 @@ const ProfileEdit = () => {
         userService
         .getOneUser(id)
         .then((userDB) => {
-            console.log('USER DB',userDB.data)
             setProfileData(userDB.data)
         })
     }, []);
@@ -52,15 +48,12 @@ const ProfileEdit = () => {
     const handleSubmit = e => {
 
         e.preventDefault()
-        console.log("This is profile data", profileData)
-        //debugger
         userService
             .saveUser(user._id, profileData)
             .then(response => {
-                console.log("This is the response",response)
                 navigate(`/profile/${profileData._id}`)       
             })
-            .catch(err => console.log(err))
+            .catch(error => (error))
     }
 
  const handleImageUpload = (e) => {
@@ -76,7 +69,7 @@ const ProfileEdit = () => {
                 setLoadingImage(false)
                 setProfileData({ ...profileData, userImg: data.cloudinary_url })
             })
-            .catch(err => console.log(err))
+            .catch(error => (error))
     }
 
   
@@ -85,18 +78,18 @@ const ProfileEdit = () => {
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" onChange={handleInputChange} name="username" />
+                <Form.Control type="text" value={profileData.username} onChange={handleInputChange} name="username" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="description">
                 <Form.Label>Tagline</Form.Label>
-                <Form.Control as="textarea" rows={2} onChange={handleInputChange} name="tagLine" />
+                <Form.Control as="textarea" value={profileData.tagLine} rows={2} onChange={handleInputChange} name="tagLine" />
   
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="length">
                 <Form.Label>email</Form.Label>
-                <Form.Control type="email" onChange={handleInputChange} name="email" />
+                <Form.Control type="email" value={profileData.email} onChange={handleInputChange} name="email" />
             </Form.Group>
 
            
