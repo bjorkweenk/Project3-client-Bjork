@@ -18,9 +18,11 @@ function StoreDetails() {
     useEffect(() => {
 
         StoresService
+
             .getStoreDetails(storeId)
             .then((response) => {
                 setStoreDetails(response.data)})
+
             .catch(err => console.log(err))
 
     }, [])

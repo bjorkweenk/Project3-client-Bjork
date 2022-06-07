@@ -1,55 +1,70 @@
 import React from 'react';
 import { Container } from "react-bootstrap"
 import "./ProfileEdit.css"
-import { useState } from "react"
+import { useState, useContext} from "react"
 import { Form, Button } from "react-bootstrap"
 import userService from "../../../services/user.service"
 import uploadService from "../../../services/upload.service"
-import { useNavigate } from "react-router-dom";
-
-
+import { useNavigate, useParams } from "react-router-dom";
+import {AuthContext} from "../../../context/auth.context"
+import { useEffect } from 'react';
 
 
 const ProfileEdit = () => {
 
     const navigate = useNavigate()
+    const {user} = useContext(AuthContext)
+
+    const {id} = useParams()
+
+    console.log("this is user", user)
 
     const [profileData, setProfileData] = useState({
-        _id: '',
+        user: id,
         username: '',
         tagLine: '',
         email: '',
         userImg: ''
     })
 
+    useEffect(() => {
+        userService
+        .getOneUser(id)
+        .then((userDB) => {
+            console.log('USER DB',userDB.data)
+            setProfileData(userDB.data)
+        })
+    }, []);
+
     const [loadingImage, setLoadingImage] = useState(false)
+
+    const { username, tagLine, email, userImg } = profileData
 
     const handleInputChange = e => {
         const { name, value } = e.currentTarget
 
         setProfileData({
-            
             ...profileData,
-            [name]: value               // computed property names
+            [name]: value              
         })
     }
 
     const handleSubmit = e => {
 
         e.preventDefault()
-        console.log(profileData)
-
+        console.log("This is profile data", profileData)
+        //debugger
         userService
-            .saveUser("629e0bfce94c8adf6704fd4f", profileData.username, profileData.tagLine, profileData.email)
+            .saveUser(user._id, profileData)
             .then(response => {
-                console.log(response)
-                
+                console.log("This is the response",response)
+                navigate(`/profile/${profileData._id}`)       
             })
             .catch(err => console.log(err))
     }
 
-   /*  const handleImageUpload = (e) => {
-
+ const handleImageUpload = (e) => {
+        e.preventDefault();
         setLoadingImage(true)
 
         const uploadData = new FormData()
@@ -64,14 +79,10 @@ const ProfileEdit = () => {
             .catch(err => console.log(err))
     }
 
-    const { username, tagline, email, userImg } = profileData
- */
+  
     return (
 
-
-
-
-        <Form onSubmit={handleSubmit} aftersubmit={() => navigate(`/profile/${profileData._id}`)}>
+        <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" onChange={handleInputChange} name="username" />
@@ -89,10 +100,10 @@ const ProfileEdit = () => {
             </Form.Group>
 
            
-           {/*  <Form.Group className="mb-3" controlId="imageUrl">
+            <Form.Group className="mb-3" controlId="imageUrl">
                 <Form.Label> profile picture</Form.Label>
                 <Form.Control type="file" onChange={handleImageUpload} />
-            </Form.Group> */}
+            </Form.Group> 
 
             <button type="submit"> Confirm </button>
         </Form>

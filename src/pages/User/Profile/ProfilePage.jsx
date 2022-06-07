@@ -15,6 +15,7 @@ import LikesBtn from "../../../components/Likes/LikesBtn"
 const ProfilePage = () => {
 
     const {user} = useContext(AuthContext)
+    
     const [profile, setProfile] = useState(null)
 
     useEffect(() => {
