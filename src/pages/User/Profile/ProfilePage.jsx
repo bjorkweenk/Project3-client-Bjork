@@ -59,7 +59,7 @@ const ProfilePage = () => {
 
             <a href="/home">
               {" "}
-              <button> go back </button>
+              <a href="/home" class="button10"> <img src="https://flyclipart.com/thumb2/arrow-to-the-left-arrow-png-icon-free-download-510843.png" width={15} height={15}/> </a>
             </a>
           </div>
         </Container>

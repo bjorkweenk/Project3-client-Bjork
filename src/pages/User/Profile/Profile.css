@@ -19,7 +19,7 @@
 
 .userName {
     font-weight: 200;
-    color: #760c0c;
+    color: #db2727;
     display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -33,7 +33,7 @@
 
 
 .editBtn {
-    color: #760c0c;
+    color: #db2727;
     border-radius: 20px;
     background-color: white;
     margin-top: 20px ;
@@ -46,12 +46,12 @@
 }
 
 .title2 {
-    color: #760c0c;
+    color: #db2727;
     margin-top: 20px;
 }
 
 button {
-    color: #760c0c;
+    color: #db2727;
     border-radius: 20px;
     background-color: white;
     margin-top: 20px ;
@@ -63,4 +63,12 @@ button {
     font-weight: 500;
 }
 
-
+.button10 {
+    margin-left: -170px;
+    height: 20px;
+    width: 20px;
+    text-decoration: none;
+    background-color: white;
+    border: 10px solid white;
+    border-radius: 20px;
+}

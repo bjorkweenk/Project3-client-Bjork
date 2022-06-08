@@ -7,10 +7,10 @@
 .friendsCard {
     display: flex;
     flex-direction: row;
-    border: 1px solid #760c0c;
+    border: 1px solid #db2727;
     padding: 20px;
     border-radius: 20px;
-    background-color: #760c0c;
+    background-color: #db2727;
     margin-top: 20px;
     margin-left: 10px;
     width: 300px;

@@ -10,23 +10,27 @@ const StoreCard = ({ store }) => {
   //const { user } = useContext(AuthContext);
    console.log('STORE!!', store)
   return (
-    <Card className="StoreCard">
-      <Card.Img variant="top" src={store.storeImg} />
-      <Card.Body>
-        <Card.Title>{store.storeName}</Card.Title>
-        <div className="d-grid gap-2">
-          <Link to={`/store-details/${store._id}`} className="btn btn-dark">
-            See details
-          </Link>
-          <p class="card-text">{store.storeAddress}</p>
-          <p class="card-text">{store.storePhone}</p>
-          <p class="card-text">{store.deliveryTime}</p>
-          <p class="card-text">{store.priceRange}</p>
-          <p class="card-text">{store.storeLikes}</p>
-          <LikesBtn store={store}/>
+    <div className="StoreCard">
+
+      <div className="layer">
+      <img className="storeImage" src={store.storeImg} height="140px" width="340px"/>
+      </div>
+     
+      <a className="storeNameA" href={`/store-details/${store._id}`}> <p className="storename"> {store.storeName}</p> </a>
+      
+      <div>
+        <div class="tags">
+         {/* <p className="card-text">{store.storeAddress}</p> */}
+         <p className="card-text">{store.storePhone}</p>
+
+          <p className="card-text">{store.deliveryTime}</p>
+          <p className="card-text">{store.priceRange}</p>
+         {/*  <p className="card-text">{store.storeLikes}</p> */}
+         {/*  <LikesBtn store={store}/> */}
+         </div>
+         </div>
         </div>
-      </Card.Body>
-    </Card>
+     
   );
 };
 
