@@ -3,9 +3,11 @@ import React from "react";
 import { useState, useContext, useEffect } from "react";
 import StoresService from "../../services/store.service.js";
 import "./HomePage.css";
+import StoreCard from "../../components/StoreCard/StoreCard.jsx";
 
 const HomePage = (props) => {
-  const [cuisines, setFilteredCuisines] = useState();
+  const [cuisines, setFilteredCuisines] = useState(null);
+  const [friendsStores, setFriendsStore] = useState(null);
   //const {user} = useContext(AuthContext)
 
   useEffect(() => {
@@ -16,6 +18,16 @@ const HomePage = (props) => {
       })
       .catch((error) => error);
   }, []);
+
+  useEffect(() => {
+    StoresService.getStoresFriends()
+      .then((response) => {
+        console.log('RESPONSE DATA', response.data)
+        setFriendsStore(response.data);
+      })
+      .catch((error) => error);
+  }, [])
+
 
   const handleCuisine = (e) => {
     e.preventDefault();
@@ -126,7 +138,13 @@ const HomePage = (props) => {
           <p> Meditaranean</p>
         </div>
       </div>
-
+      {friendsStores?.map((favStore, index)=>(
+        <>
+        <StoreCard key={index} store={favStore.store} />
+        <p>Liked by {favStore.friend.username}</p>
+        <img src= {favStore.friend.userImg}/>
+        </>
+      ))}
       {/*  <ul>
             {cuisines.map((cuisine) => (
         <div key={props.store._id} className="card">
@@ -136,5 +154,6 @@ const HomePage = (props) => {
             </ul>  */}
     </>
   );
+
 };
 export default HomePage;
