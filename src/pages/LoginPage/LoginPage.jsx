@@ -1,20 +1,20 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap'
+//import { Container, Row, Col } from 'react-bootstrap'
 import Loginform from '../../components/LoginForm/Login'
 
 
 const LoginPage = () => {
 
     return (
-        <Container>
-            <Row>
+       // <Container>
+          //  <Row>
                
                     
                     <Loginform />
 
                 
-            </Row>
-        </Container>
+           // </Row>
+       // </Container>
     )
 }
 

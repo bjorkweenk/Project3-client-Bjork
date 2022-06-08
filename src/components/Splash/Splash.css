@@ -4,8 +4,11 @@
 }
 
 body {
-	background-image: url("../../rsc/back.jpg");
-	background-repeat: no-repeat;
+
+	background-image: url("../../../public/back.jpg");
+	background-size: cover;
+	min-height: 100vh;
+
 }
 
 /* first column */
