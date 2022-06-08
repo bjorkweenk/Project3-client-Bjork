@@ -31,7 +31,7 @@ const HomePage = (props) => {
    <>
 
 <div class="logo"> 
-<img class="logo1" src="../../../logo.jpg"/>
+<img class="logo3" src="../../../logo.jpg"/>
 </div>
       <div class="cuisine" style={{ display: 'flex', overflowX: 'scroll' }}>
 

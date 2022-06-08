@@ -75,31 +75,41 @@ const ProfileEdit = () => {
   
     return (
 
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="name">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" value={profileData.username} onChange={handleInputChange} name="username" />
-            </Form.Group>
+    
 
-            <Form.Group className="mb-3" controlId="description">
-                <Form.Label>Tagline</Form.Label>
-                <Form.Control as="textarea" value={profileData.tagLine} rows={2} onChange={handleInputChange} name="tagLine" />
+
+        <div className="background2">
+         <a href="/home"><img class="logo6" src="/logo.jpg" /> </a>  
+        <form onSubmit={handleSubmit}>
+            <div className="name" controlId="name">
+                <label className="text2">Name</label>
+                <br></br>
+                <input type="text" value={profileData.username} onChange={handleInputChange} name="username" />
+            </div>
+
+            <div className="tagline" controlId="description">
+                <label className="text2">Tagline</label>
+                <br></br>
+                <input as="textarea" value={profileData.tagLine} rows={2} onChange={handleInputChange} name="tagLine" />
   
-            </Form.Group>
+            </div>
 
-            <Form.Group className="mb-3" controlId="length">
-                <Form.Label>email</Form.Label>
-                <Form.Control type="email" value={profileData.email} onChange={handleInputChange} name="email" />
-            </Form.Group>
+            <div className="email" controlId="length">
+                <label className="text2">email</label>
+                <br></br>
+                <input type="email" value={profileData.email} onChange={handleInputChange} name="email" />
+            </div>
 
            
-            <Form.Group className="mb-3" controlId="imageUrl">
-                <Form.Label> profile picture</Form.Label>
-                <Form.Control type="file" onChange={handleImageUpload} />
-            </Form.Group> 
+            <div class="profilepicture" controlId="imageUrl">
+                <label className="text2"> profile picture</label>
+                <br></br>
+                <input class="inputPicture" type="file" onChange= {handleImageUpload} />
+            </div> 
 
-            <button type="submit"> Confirm </button>
-        </Form>
+            <button class="button2" type="submit"> Confirm </button>
+        </form>
+        </div>
 
     )
 }
