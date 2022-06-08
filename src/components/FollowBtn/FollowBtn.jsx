@@ -1,6 +1,8 @@
-import { Button, Form } from "react-bootstrap";
+import "./FollowBtn.css"
+import { Form } from "react-bootstrap";
 import { React, useContext, useState, useEffect } from "react";
 import FriendService from "./../../services/friends.service";
+
 
 export default function FollowBtn({ friend, addFriends, setFollowing }) {
   const [isFollowing, setIsFollowing] = useState(null);
@@ -42,15 +44,15 @@ export default function FollowBtn({ friend, addFriends, setFollowing }) {
     <>
       {isFollowing ? (
         <Form onSubmit={handleUnfollow}>
-          <Button variant="dark" type="submit" className="friendsBtn">
-            Unfollow
-          </Button>
+          <button className="friendsBtn">
+           <h4 class="unfollow"> Unfollow </h4>
+          </button>
         </Form>
       ) : (
         <Form onSubmit={handleFollow}>
-          <Button variant="dark" type="submit" className="friendsBtn">
-            Follow
-          </Button>
+          <button className="friendsBtn">
+           <h4 class="unfollow"> Follow </h4>
+          </button>
         </Form>
       )}
     </>
