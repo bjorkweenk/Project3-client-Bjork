@@ -33,7 +33,8 @@ class StoreService {
 
     // To get the liked stores filtered by user's friends
     getStoresFriends = () => {
-        return this.app.get('/api/store/friends-store')
+        //return this.app.get('/api/store/friends-store')
+        return this.app.get('/api/like/friendsStores')
     }
 
     // To get all the cuisine types
@@ -45,6 +46,7 @@ class StoreService {
     getStoresByCuisine =(cuisineType) =>{
         return this.app.get(`/api/store/by-cuisine-type/${cuisineType}`)
     }
+    
 }
 
 const StoresService = new StoreService();
