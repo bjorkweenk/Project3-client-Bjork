@@ -3,27 +3,24 @@ import { useContext, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import "./Profile.css";
 import userService from "../../../services/user.service";
-import { AuthContext } from "../../../context/auth.context";
 import Loader from "../../../components/Loader/Loader";
 import LikesBtn from "../../../components/Likes/LikesBtn";
-
+import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
-  const { user } = useContext(AuthContext);
+  const { id } = useParams();
 
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    if (user) {
-      userService
-        .getOneUser(user._id)
-        .then((response) => {
-          setProfile(response.data);
-        })
-        .catch((error) => (error));
-    }
-  }, [user]);
-  
+    userService
+      .getOneUser(id)
+      .then((response) => {
+        setProfile(response.data);
+      })
+      .catch((error) => error);
+  }, []);
+
   return (
     <>
       {profile ? (
