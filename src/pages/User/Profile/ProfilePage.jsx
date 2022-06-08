@@ -4,7 +4,6 @@ import { Container } from "react-bootstrap";
 import "./Profile.css";
 import userService from "../../../services/user.service";
 import Loader from "../../../components/Loader/Loader";
-import LikesBtn from "../../../components/Likes/LikesBtn";
 import { useParams } from "react-router-dom";
 
 const ProfilePage = () => {
@@ -61,8 +60,6 @@ const ProfilePage = () => {
               {" "}
               <button> go back </button>
             </a>
-
-            <LikesBtn />
           </div>
         </Container>
       ) : (

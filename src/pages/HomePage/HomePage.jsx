@@ -1,51 +1,45 @@
-import React from 'react';
+import React from "react";
 //import { Link, AuthContext } from 'react-router-dom'
-import { useState, useContext, useEffect } from 'react'
-import StoresService from '../../services/store.service.js'
-import './HomePage.css'
-
+import { useState, useContext, useEffect } from "react";
+import StoresService from "../../services/store.service.js";
+import "./HomePage.css";
 
 const HomePage = (props) => {
-
   const [cuisines, setFilteredCuisines] = useState();
   //const {user} = useContext(AuthContext)
 
-  useEffect(() => {                                // <== ADD THE EFFECT
-    StoresService
-      .getAllCuisines()
+  useEffect(() => {
+    // <== ADD THE EFFECT
+    StoresService.getAllCuisines()
       .then((response) => {
-        setFilteredCuisines(response.data)
+        setFilteredCuisines(response.data);
       })
-      .catch((error) =>(error))
+      .catch((error) => error);
   }, []);
 
-   const handleCuisine = (e) => {
-      e.preventDefault();
+  const handleCuisine = (e) => {
+    e.preventDefault();
 
-      StoresService
-      .getStoresByCuisine()
-      .then((cuisine) => setFilteredCuisines(cuisine))
-  } 
+    StoresService.getStoresByCuisine().then((cuisine) =>
+      setFilteredCuisines(cuisine)
+    );
+  };
 
   return (
-   <>
-
-<div class="logo"> 
-<img class="logo3" src="../../../logo.jpg"/>
-</div>
-      <div class="cuisine" style={{ display: 'flex', overflowX: 'scroll' }}>
-
+    <>
+      <div class="logo">
+        <img class="logo3" src="../../../logo.jpg" />
+      </div>
+      <div class="cuisine" style={{ display: "flex", overflowX: "scroll" }}>
         <div class="cuisinetype">
           <img class="circle" src="pizza1.png" width={100} height={100} />
           <p> Pizza </p>
         </div>
 
-
-        <div class="cuisinetype" >
+        <div class="cuisinetype">
           <img class="square" src="Sushi.png" width={100} height={100} />
           <p> Sushi </p>
         </div>
-
 
         <div class="cuisinetype">
           <img class="square" src="thai.png" width={100} height={100} />
@@ -107,7 +101,6 @@ const HomePage = (props) => {
           <p> Salads</p>
         </div>
 
-
         <div class="cuisinetype">
           <img class="square" src="/mexican.png" width={100} height={100} />
           <p> Mexican</p>
@@ -124,11 +117,15 @@ const HomePage = (props) => {
         </div>
 
         <div class="cuisinetype">
-          <img class="meditareann" src="/meditareannn.png" width={100} height={100} />
+          <img
+            class="meditareann"
+            src="/meditareannn.png"
+            width={100}
+            height={100}
+          />
           <p> Meditaranean</p>
         </div>
       </div>
-
 
       {/*  <ul>
             {cuisines.map((cuisine) => (
@@ -137,9 +134,7 @@ const HomePage = (props) => {
         </div>
       ))}
             </ul>  */}
-
-</>
-  )
-}
-
-export default HomePage;           
+    </>
+  );
+};
+export default HomePage;
