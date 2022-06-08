@@ -5,6 +5,7 @@ import authService from "../../services/auth.service";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import { MessageContext } from "../../context/message.context";
+import "./Signup.css"
 
 const Signup = () => {
   const [signupData, setSignupData] = useState({
@@ -41,50 +42,53 @@ const Signup = () => {
 
   return (
     <>
-      <div class="background">
+      <div class="back">
         <div>
           {" "}
-          <img class="logo" src="/logo.jpg" />
+         <a href="/"><img class="logo1" src="/logo.jpg" /></a> 
         </div>
 
-        <Form className="formLogging" onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="username">
-            <Form.Label className="text1">Username</Form.Label>
-            <Form.Control
+        <form className="formLogging" onSubmit={handleSubmit}>
+          <div className="mb-3" controlId="username">
+            <label className="text1">Username</label>
+            <br></br>
+            <input
               type="text"
               onChange={handleInputChange}
               name="username"
-              placeholder="username"
+              placeholder="  username"
               value={username}
             />
-          </Form.Group>
+          </div>
 
-          <Form.Group className="mb-3" controlId="email">
-            <Form.Label className="text1">Email</Form.Label>
-            <Form.Control
+          <div className="mb-3" controlId="email">
+            <label className="text1">Email</label>
+            <br></br>
+            <input
               type="email"
               onChange={handleInputChange}
               name="email"
-              placeholder="email"
+              placeholder="  email"
               value={email}
             />
-          </Form.Group>
+          </div>
 
-          <Form.Group className="mb-3" controlId="password">
-            <Form.Label className="text1">Password</Form.Label>
-            <Form.Control
+          <div className="mb-3" controlId="password">
+            <label className="text1">Password</label>
+            <br></br>
+            <input
               type="password"
               onChange={handleInputChange}
               name="password"
-              placeholder="password"
+              placeholder="  password"
               value={password}
             />
-          </Form.Group>
+          </div>
 
-          <button className="button1" variant="dark" type="submit">
+          <button className="button2" variant="dark" type="submit">
             Signup
           </button>
-        </Form>
+        </form>
       </div>
     </>
   );
