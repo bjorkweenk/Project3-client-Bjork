@@ -33,7 +33,7 @@ function StoreDetails() {
             src={storeDetails.storeImg}
             alt="store-img"
           />
-          <LikesBtn />
+          <LikesBtn store={storeDetails}/>
           <p>Price range: {storeDetails.priceRange}</p>
           <p>Delivery time: {storeDetails.deliveryTime}</p>
           <a href={storeDetails.storeAddress} target="_blank">
