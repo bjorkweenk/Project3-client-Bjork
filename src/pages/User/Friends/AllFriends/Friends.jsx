@@ -1,5 +1,4 @@
-import React from 'react';
-import {useState, useEffect} from 'react'
+import React,{useState, useEffect} from 'react'
 import FriendsCard from "../../../../components/FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
 import FriendsService from "./../../../../services/friends.service.js"
