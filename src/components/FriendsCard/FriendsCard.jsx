@@ -1,5 +1,4 @@
-import FriendsCardStyle from "./FriendsCardStyle.css";
-import { Card } from "react-bootstrap";
+import "./FriendsCardStyle.css";
 import { React, useContext,} from "react";
 import { AuthContext } from "../../context/auth.context.js";
 import FollowBtn from "../FollowBtn/FollowBtn";
@@ -8,22 +7,27 @@ const FriendsCard = ({ friend, addFriends, setFollowing }) => {
   const { user } = useContext(AuthContext);
 
   return (
-    <Card className="friendsCard">
-      <Card.Img variant="top" src={friend.userImg} />
-      <Card.Body>
-        <a href={`/profile/${friend._id}`}>
-          <Card.Title>{friend.username}</Card.Title>
+    <div className="friendsCard">
+      <img class="imagefriends" src={friend.userImg}  />
+      <div>
+
+        <a class="textA" href={`/profile/${friend._id}`}>
+          <h4 class="textA">{friend.username}</h4>
         </a>
 
-        <div className="d-grid gap-2">
+        <div>
+      <p className="friendTagline"> {friend.tagLine}</p>
+      </div>
+
+        <div className="buttonFollow">
           <FollowBtn
             friend={friend}
             addFriends={addFriends}
             setFollowing={setFollowing}
           />
         </div>
-      </Card.Body>
-    </Card>
+      </div>
+    </div>
   );
 };
 

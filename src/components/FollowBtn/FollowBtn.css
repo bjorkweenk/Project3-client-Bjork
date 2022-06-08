@@ -1,0 +1,14 @@
+.friendsBtn {
+    height: 30px;
+    width:  100px;
+   border-radius: 20px;
+   margin-left: 20px;
+
+}
+
+.unfollow {
+    text-align: center;
+    font-size: 10px; 
+}
+
+

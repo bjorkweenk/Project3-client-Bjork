@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from "react-bootstrap"
 import {useState, useEffect} from 'react'
 import FriendsCard from "../../../../components/FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
@@ -44,17 +43,17 @@ const Friends= () => {
         <div>
         {friends
             ?
-            <Row>
+            <div>
                 {
                     friends.map(friend => {
                         return (
-                            <Col md={{ span: 4 }} key={friend._id}>
+                            <div key={friend._id}>
                                 <FriendsCard friend = {friend} addFriends={addFriends} setFollowing= {setFollowing}/>
-                            </Col>
+                            </div>
                         )
                     })
                 }             
-            </Row>
+            </div>
             :
             <Loader />}
 <div>
