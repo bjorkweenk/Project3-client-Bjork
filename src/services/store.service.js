@@ -42,8 +42,8 @@ class StoreService {
     }
  
     // To get the stores filtered by cuisine
-    getStoresByCuisine =() =>{
-        return this.app.get('/api/store/by-cuisine-type/:cuisineType')
+    getStoresByCuisine =(cuisineType) =>{
+        return this.app.get(`/api/store/by-cuisine-type/${cuisineType}`)
     }
 }
 

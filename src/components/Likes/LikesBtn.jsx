@@ -1,6 +1,7 @@
-import { React, useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from 'react';
 import StoresService from "../../services/store.service.js"
 import "./LikesBtn.css";
+
 
 
 export default function LikesBtn ({store}) {
@@ -42,24 +43,13 @@ export default function LikesBtn ({store}) {
 
   handleOnChange = (event) => {
     this.setState({ count: this.state.count + 1 });
-  };
-
-  render() {
-    return (
-      <div className="div-btn">
-        <button className="heartbutton" onClick={this.handleOnChange}>
-          <div>
-            {" "}
-            <img
-              src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png"
-              width={20}
-            />{" "}
-            {this.state.count}
-          </div>{" "}
-        </button>
+@@ -27,6 +60,6 @@ class LikesBtn extends Component {
       </div>
     );
   }
+}
  */
+
+
 
 

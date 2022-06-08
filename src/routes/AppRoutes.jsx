@@ -27,7 +27,7 @@ const AppRoutes = () => {
       <Route path="/liked-stores" element={<LikedStores />} />
 
       {/* <Route path="/search-friends" element={<SearchFriends />} /> */}
-      <Route path="/filtered-stores" element ={<FilteredStores/>}/>
+      <Route path="/filtered-stores/:cuisineType" element ={<FilteredStores/>}/>
     
       <Route path="/profile/:id" element={<ProfilePage />}/>
         <Route path="/profile-edit/:id" element={<ProfileEdit />}>
