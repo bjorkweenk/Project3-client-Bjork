@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 import StoresService from "./../../../services/store.service.js";
 import { Container, Row, Col, Button } from "react-bootstrap";
@@ -99,7 +98,7 @@ function StoreDetails() {
               <Accordion.Header>
                 <strong>Delivery options</strong>
               </Accordion.Header>
-              <Accordion.Body> {storeDetails.deliveryOptions} </Accordion.Body>
+              <Accordion.Body dangerouslySetInnerHTML={{__html: storeDetails.deliveryOptions}} />
             </Accordion.Item>
           </Accordion>
         </Col>
