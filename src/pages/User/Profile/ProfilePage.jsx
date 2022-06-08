@@ -1,3 +1,4 @@
+
 //import { useContext } from "react"
 import React from 'react';
 import { useContext, useEffect, useState } from "react"
@@ -10,6 +11,7 @@ import {AuthContext} from "../../../context/auth.context"
 import Loader from "../../../components/Loader/Loader"
 import LikesBtn from "../../../components/Likes/LikesBtn"
 //import uploadService from "../../../services/upload.service"
+
 
 
 const ProfilePage = () => {
@@ -55,6 +57,7 @@ const ProfilePage = () => {
           <div className="container">
             <div className="row">
 
+
             <img className="storeImage" src={profile.storeImg} alt={profile.storeImg} />
             </div>
           </div> 
@@ -62,6 +65,7 @@ const ProfilePage = () => {
          <a href="/home"> <button> go back </button></a>
 
           <LikesBtn />
+
         </Container>
         :
         <Loader />}
