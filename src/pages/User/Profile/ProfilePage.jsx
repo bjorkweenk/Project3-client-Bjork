@@ -1,15 +1,14 @@
-import React from "react";
-import { useContext, useEffect, useState } from "react";
+import { React, useContext, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import "./Profile.css";
 import userService from "../../../services/user.service";
 import Loader from "../../../components/Loader/Loader";
-import LikesBtn from "../../../components/Likes/LikesBtn";
 import { useParams } from "react-router-dom";
+import StoreCard from "../../../components/StoreCard/StoreCard"
 
 const ProfilePage = () => {
   const { id } = useParams();
-
+  
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const ProfilePage = () => {
       })
       .catch((error) => error);
   }, []);
-
+ 
   return (
     <>
       {profile ? (
@@ -49,11 +48,12 @@ const ProfilePage = () => {
 
             <div className="container">
               <div className="row">
-                <img
+              {profile.favoriteStores.map((store, idx) => <StoreCard key={idx} store={store}/>)}
+               {/*  <img
                   className="storeImage"
                   src={profile.storeImg}
                   alt={profile.storeImg}
-                />
+                /> */}
               </div>
             </div>
 
@@ -61,8 +61,6 @@ const ProfilePage = () => {
               {" "}
               <button> go back </button>
             </a>
-
-            <LikesBtn />
           </div>
         </Container>
       ) : (

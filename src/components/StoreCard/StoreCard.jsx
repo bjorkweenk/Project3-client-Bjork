@@ -8,7 +8,7 @@ import LikesBtn from "../Likes/LikesBtn"
 
 const StoreCard = ({ store }) => {
   //const { user } = useContext(AuthContext);
-
+   console.log('STORE!!', store)
   return (
     <Card className="StoreCard">
       <Card.Img variant="top" src={store.storeImg} />
@@ -23,7 +23,7 @@ const StoreCard = ({ store }) => {
           <p class="card-text">{store.deliveryTime}</p>
           <p class="card-text">{store.priceRange}</p>
           <p class="card-text">{store.storeLikes}</p>
-          <LikesBtn />
+          <LikesBtn store={store}/>
         </div>
       </Card.Body>
     </Card>
