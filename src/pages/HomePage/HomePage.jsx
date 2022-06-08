@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, AuthContext } from 'react-router-dom'
+//import { Link, AuthContext } from 'react-router-dom'
 import { useState, useContext, useEffect } from 'react'
 import StoresService from '../../services/store.service.js'
 import './HomePage.css'
@@ -14,10 +14,9 @@ const HomePage = (props) => {
     StoresService
       .getAllCuisines()
       .then((response) => {
-        console.log('response.data', response.data);
         setFilteredCuisines(response.data)
-      });
-
+      })
+      .catch((error) =>(error))
   }, []);
 
    const handleCuisine = (e) => {

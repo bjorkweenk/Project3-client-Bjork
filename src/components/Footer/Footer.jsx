@@ -1,14 +1,12 @@
-import React from 'react';
-import './Footer.css'
-
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
-    return (
-        <>
-         <footer> All rights served </footer>
-        </>
-      );
-    }
+  return (
+    <>
+      <footer> All rights served </footer>
+    </>
+  );
+};
 
-
-export default Footer
+export default Footer;

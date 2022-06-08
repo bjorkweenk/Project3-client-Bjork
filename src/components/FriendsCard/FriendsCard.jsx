@@ -1,27 +1,26 @@
-
-//const User = require("./../models/user.model");
 import FriendsCardStyle from "./FriendsCardStyle.css";
-import { Card, Button, Form } from "react-bootstrap";
-import {Link } from 'react-router-dom'
-import { React, useContext, useState, useEffect } from "react";
+import { Card } from "react-bootstrap";
+import { React, useContext,} from "react";
 import { AuthContext } from "../../context/auth.context.js";
-import FriendService from "../../services/friends.service.js";
 import FollowBtn from "../FollowBtn/FollowBtn";
 
-
 const FriendsCard = ({ friend, addFriends, setFollowing }) => {
+  const { user } = useContext(AuthContext);
 
-  const { user } = useContext(AuthContext)
-   
   return (
     <Card className="friendsCard">
       <Card.Img variant="top" src={friend.userImg} />
       <Card.Body>
-        <a href={`/profile/${friend._id}`}><Card.Title>{friend.username}</Card.Title></a>
+        <a href={`/profile/${friend._id}`}>
+          <Card.Title>{friend.username}</Card.Title>
+        </a>
 
         <div className="d-grid gap-2">
-          <FollowBtn friend={friend} addFriends={addFriends} setFollowing= {setFollowing}/>
-          
+          <FollowBtn
+            friend={friend}
+            addFriends={addFriends}
+            setFollowing={setFollowing}
+          />
         </div>
       </Card.Body>
     </Card>
