@@ -50,19 +50,19 @@ const Loginform = () => {
     <div> <img class="logo" src="/logo.jpg"/></div>
           
 
-            <Form className="formLogging" onSubmit={handleSubmit}>
-                <Form.Group className="login" controlId="email">
-                    <Form.Label className="text1">Email</Form.Label>
-                    <Form.Control type="email" onChange={handleInputChange} name="email" value={email} placeholder="email" />
-                </Form.Group>
+            <form className="formLogging" onSubmit={handleSubmit}>
+                <div className="login" controlId="email">
+                    <label className="text1">Email</label>
+                    <input type="email" onChange={handleInputChange} name="email" value={email} placeholder="email" />
+                </div>
 
-                <Form.Group className="login" controlId="password">
-                    <Form.Label className="text1">Password</Form.Label>
-                    <Form.Control type="password" onChange={handleInputChange} name="password" value={password} placeholder="password" />
-                </Form.Group>
+                <div className="login" controlId="password">
+                    <label className="text1">Password</label>
+                    <input type="password" onChange={handleInputChange} name="password" value={password} placeholder="password" />
+                </div>
 
                 <button className="button1" type="submit">Log in</button>
-            </Form>
+            </form>
 
             </div>   
         </>

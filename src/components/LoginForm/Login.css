@@ -33,7 +33,13 @@
     padding-top:10px;
     background-image: url("https://i.pinimg.com/564x/e9/39/ba/e939ba2d9e812b3dfc93bb987f14ac6c.jpg");
     height: 400px;
-    width: 400px
+    width: 400px;
+    margin-top: 120px;
+
+}
+
+.form   {
+    padding: 20px;
 }
 
 .logo {
