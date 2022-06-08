@@ -17,14 +17,13 @@ class StoreService {
         })
     }
 
-    // To get the details of one store
     getStoreDetails = (storeId) => {
         return this.app.get(`/api/store/${storeId}`)
     }
 
     // this is to get the stores the user liked in order to render in the user profile
     getStoresLiked = (storeId) => {
-        return this.app.get(`/api/store/${storeId}/like`)
+        return this.app.post(`/api/like/${storeId}`)
     }
     
    /*  // this is to get the stores the user liked in order to render in the Homepage
