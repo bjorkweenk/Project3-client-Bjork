@@ -14,8 +14,8 @@ const PrivateRoute = () => {
     }
 
     if (!isLoggedIn) {
-        showMessage('Hi, please login or sign up to enjoy Sharelicious!')
-        return <Navigate to="/inicio-sesion" />
+        showMessage('Hi, please login or signup to enjoy Sharelicious!')
+        return <Navigate to="/signup" />
     }
 
     return <Outlet />
