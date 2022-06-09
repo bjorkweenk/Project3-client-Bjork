@@ -52,6 +52,9 @@ const Splash = () => {
           share and connect.{" "}
         </p>
       </div>
+      <div  class="splashpeople">
+      <img class="splashpeople" src="./people.png" width={300} height={300}/>
+      </div>
     </>
   );
 };

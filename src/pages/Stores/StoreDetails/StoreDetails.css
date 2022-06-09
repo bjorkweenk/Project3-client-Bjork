@@ -22,3 +22,17 @@ body {
 p {
   font-weight: 200;
 }
+
+.accordion-button:not(.collapsed) {
+  color: white !important;
+  background-color: rgb(255, 7, 7) !important; 
+}
+
+.delivery {
+  color: black 
+}
+
+.storedetails {
+  color: red ; 
+}
+

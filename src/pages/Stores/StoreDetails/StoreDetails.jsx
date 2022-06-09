@@ -36,11 +36,11 @@ function StoreDetails() {
           <LikesBtn store={storeDetails}/>
           <p>Price range: {storeDetails.priceRange}</p>
           <p>Delivery time: {storeDetails.deliveryTime}</p>
-          <a href={storeDetails.storeAddress} target="_blank">
+          <a class="storedetails" href={storeDetails.storeAddress} target="_blank">
             See location
           </a>
           <br></br>
-          <a href={storeDetails.storePhone}>Phone </a>
+          <a class="storedetails" href={storeDetails.storePhone}>Phone </a>
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header>
