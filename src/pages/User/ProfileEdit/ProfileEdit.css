@@ -21,7 +21,7 @@ form {
 	margin-left: 110px; 
     margin-top: 30px;
     margin-bottom: 30px;
-    filter: drop-shadow(10px 10px 4px #db2727);
+    filter: drop-shadow(5px 5px 4px #db2727);
     
 }
 
@@ -70,7 +70,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 20px;
     border-style: none;
     padding: 10px;
-    background-color: #db2727;
+    background-color: #422e2e;
     font-weight: 600;
 }
 
@@ -81,7 +81,7 @@ input[type="file"] {
 }
 
 .button2 {
-    color: #db2727;
+    color: #471e1e;
     border-radius: 20px;
     background-color: white;
     margin-top: 20px ;
@@ -91,7 +91,7 @@ input[type="file"] {
     padding-left: 30px;
     padding-right: 30px;
     font-weight: 700;
-    border: 1px solid #c66c6c;
+    border: 1px solid #471e1e;
 }
 
 

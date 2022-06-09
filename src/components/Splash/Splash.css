@@ -3,9 +3,9 @@
 	padding: 0;
 }
 
-body {
 
-	background-image: url("../../../src/back.jpg");
+#root {
+	background-image: url("../../../public/back.jpg");
 	background-size: cover;
 	min-height: 100vh;
 
