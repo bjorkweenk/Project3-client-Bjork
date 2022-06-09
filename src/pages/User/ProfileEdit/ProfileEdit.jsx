@@ -1,6 +1,5 @@
-import React from 'react';
 import "./ProfileEdit.css"
-import { useState, useContext, useEffect} from "react"
+import React, { useState, useContext, useEffect} from "react"
 import { Form } from "react-bootstrap"
 import userService from "../../../services/user.service"
 import uploadService from "../../../services/upload.service"

@@ -12,8 +12,7 @@ import Friends from "../pages/User/Friends/AllFriends/Friends";
 import StoreDetails from "../pages/Stores/StoreDetails/StoreDetails";
 import FilteredStores from "../pages/Stores/FilteredStores/FilteredStores";
 import LikedStores from "../pages/User/LikedStores/LikedStores"
-
-//import PrivateRoute from "./PrivateRoute"
+import PrivateRoute from "../routes/PrivateRoute"
 
 
 const AppRoutes = () => {

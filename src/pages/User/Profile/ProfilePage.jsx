@@ -1,4 +1,4 @@
-import { React, useContext, useEffect, useState } from "react";
+import React,{ useContext, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import "./Profile.css";
 import userService from "../../../services/user.service";

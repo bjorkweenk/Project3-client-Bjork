@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form } from "react-bootstrap";
 import authService from "../../services/auth.service";
 import { useNavigate } from "react-router-dom";
