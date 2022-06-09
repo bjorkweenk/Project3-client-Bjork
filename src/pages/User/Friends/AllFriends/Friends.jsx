@@ -35,12 +35,17 @@ export default function Friends (){
         setFriends([...friends, newFriend])
     }
 
+    function deleteFriends(newFriend) {
+        const newFriends = friends.filter(friend => friend._id !== newFriend)
+        setFriends([...newFriends])
+    }
+
 
     return (
         <>
 
         <div class="Friends">
-            <SearchFriends />
+            <SearchFriends search={search} setSearch={setSearch} addFriends={addFriends} setFollowing= {setFollowing} deleteFriends={deleteFriends}/>
 
         </div>
         <div>
@@ -50,8 +55,9 @@ export default function Friends (){
                 {
                     friends.map(friend => {
                         return (
+                            {following} &&
                             <div key={friend._id}>
-                                <FriendsCard search={search} setSearch={setSearch} friend = {friend} addFriends={addFriends} setFollowing= {setFollowing}/>
+                                <FriendsCard search={search} setSearch={setSearch} friend = {friend} addFriends={addFriends} setFollowing= {setFollowing} deleteFriends={deleteFriends}/>
                             </div>
                         )
                     })
