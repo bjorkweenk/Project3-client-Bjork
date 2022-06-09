@@ -23,17 +23,6 @@
  
 }
 
-
-
-
-input {
-    padding: 10px;
-    width: 300px;
-    border-radius : 20px; 
-    border-style: none;
-  
-}
-
 .button1 {
     color: #db2727;
     border-radius: 20px;
@@ -82,4 +71,15 @@ input {
     align-items: center;
     align-content: center;
 
+}
+
+.text6 {
+    color: white;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.text7 {
+    color: black;
+    margin-left: 5px;
 }

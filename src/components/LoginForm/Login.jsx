@@ -75,7 +75,7 @@ const Loginform = () => {
                         Log in
                     </button>
                 </form>
-                <p> If you don't have an account. Come <a href ="/signup">join us </a></p>
+                <p className="text6"> If you don't have an account. Come <a className="text7" href ="/signup">join us </a></p>
             </div>
         </>
     );
