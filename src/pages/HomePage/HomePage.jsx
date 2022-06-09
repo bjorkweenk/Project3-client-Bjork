@@ -140,8 +140,10 @@ const HomePage = (props) => {
       {friendsStores?.map((favStore, index)=>(
         <>
         <StoreCard key={index} store={favStore.store} />
-        <p>Liked by {favStore.friend.username}</p>
-        <img src= {favStore.friend.userImg}/>
+        <div className="borderLikes">
+        <img class="borderPhoto" src= {favStore.friend.userImg} width={50} height={50}/>
+        <p className="borderName">{favStore.friend.username}</p>
+        </div>
         </>
       ))}
       {/*  <ul>

@@ -45,13 +45,13 @@ export default function FollowBtn({ friend, addFriends, setFollowing, search, se
       {isFollowing ? (
         <Form onSubmit={handleUnfollow}>
           <button className="friendsBtn">
-           <h4 class="unfollow"> Unfollow </h4>
+           Unfollow
           </button>
         </Form>
       ) : (
         <Form onSubmit={handleFollow}>
           <button className="friendsBtn">
-           <h4 class="unfollow"> Follow </h4>
+          Follow 
           </button>
         </Form>
       )}

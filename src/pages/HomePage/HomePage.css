@@ -35,5 +35,22 @@ body {
 	height: 6rem;
 	width: 6rem;
 	border-radius: 50%;
-	filter: drop-shadow(10px 10px 4px #db2727)
+	filter: drop-shadow(5px 5px 5px 5px #db2727)
+}
+
+.borderLikes {
+	height: 100px;
+	width: 50px;
+}
+
+.borderName {
+	width: 50px;
+	overflow-x: hidden;
+	font-size: 10px;
+	text-align: center;
+	margin-top: 2px;
+}
+
+.borderPhoto {
+	border-radius: 50%;
 }
