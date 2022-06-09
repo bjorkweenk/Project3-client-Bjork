@@ -3,7 +3,7 @@ import React, { useContext,} from "react";
 import { AuthContext } from "../../context/auth.context.js";
 import FollowBtn from "../FollowBtn/FollowBtn";
 
-const FriendsCard = ({ friend, addFriends, setFollowing, search, setSearch}) => {
+const FriendsCard = ({ friend, addFriends, setFollowing, search, setSearch, deleteSearch, deleteFriends}) => {
   const { user } = useContext(AuthContext);
 
   return (
@@ -24,6 +24,8 @@ const FriendsCard = ({ friend, addFriends, setFollowing, search, setSearch}) => 
             friend={friend}
             addFriends={addFriends}
             setFollowing={setFollowing}
+            deleteSearch={deleteSearch}
+            deleteFriends={deleteFriends}
           />
         </div>
       </div>
