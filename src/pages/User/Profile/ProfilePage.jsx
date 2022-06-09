@@ -32,6 +32,9 @@ const ProfilePage = () => {
 
   return (
     <>
+
+    <a href="/home"> <img class="logo11" src="../home.png" /></a> 
+
       {isLoggedIn &&
         ( profile  ? (
           <Container>
@@ -41,7 +44,6 @@ const ProfilePage = () => {
                 src={profile.userImg}
                 alt={profile.userImg}
               />
-
               <div className="contentEdit">
                 <h5 className="userName"> {profile.username}</h5>
                 <br></br>

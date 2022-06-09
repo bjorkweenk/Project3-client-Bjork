@@ -43,6 +43,7 @@ export default function Friends() {
     <>
       {isLoggedIn && (
         <>
+      <a href="/home"> <img class="logo11" src="home.png" /></a> 
       <div class="Friends">
         <SearchFriends
           search={search}
