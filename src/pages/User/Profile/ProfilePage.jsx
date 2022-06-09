@@ -22,7 +22,7 @@ const ProfilePage = () => {
         setProfile(response.data);
       })
       .catch((error) => error);
-  }, []);
+  }, [id]);
   
   useEffect(() => {
     if(profile && user) {
