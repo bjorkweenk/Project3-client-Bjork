@@ -2,15 +2,15 @@ import React, { useContext, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import { AuthContext } from "../../../context/auth.context.js";
 import { useParams } from "react-router-dom";
-
 import userService from "../../../services/user.service";
 import Loader from "../../../components/Loader/Loader";
 import StoreCard from "../../../components/StoreCard/StoreCard";
-import LoginPage from "../../LoginPage/LoginPage";
 import "./Profile.css";
+
 
 const ProfilePage = () => {
   const [profile, setProfile] = useState(null);
+  const [isUser, setIsUser] = useState(null);
   const { isLoggedIn, user } = useContext(AuthContext);
   
   const { id } = useParams();
@@ -23,11 +23,17 @@ const ProfilePage = () => {
       })
       .catch((error) => error);
   }, []);
+  
+  useEffect(() => {
+    if(profile && user) {
+      if (profile._id === user._id) setIsUser(true);
+    }
+  }, [profile]); 
 
   return (
     <>
       {isLoggedIn &&
-        ({ profile } ? (
+        ( profile  ? (
           <Container>
             <div class="contentUser">
               <img
@@ -44,9 +50,10 @@ const ProfilePage = () => {
                   <p className="userName"> {profile.tagLine}</p>
                   <br></br>
 
+                  {isUser && 
                   <a href={`/profile-edit/${profile._id}`}>
                     <button class="editBtn"> edit</button>
-                  </a>
+                  </a>}
                 </div>
               </div>
               <h3 className="title2"> Your Favourites </h3>
@@ -73,11 +80,11 @@ const ProfilePage = () => {
             </div>
           </Container>
         ) : (
-          <Loader />
-        ))}
+        <Loader />
+          ))}
       {!isLoggedIn && (
         <>
-          <LoginPage />
+          <Loader />
         </>
       )}
     </>
