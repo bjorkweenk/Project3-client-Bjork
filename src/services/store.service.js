@@ -21,17 +21,16 @@ class StoreService {
         return this.app.get(`/api/store/${storeId}`)
     }
 
+    saveComment = (storeId) => {
+        return this.app.post(`/api/store/${storeId}`)
+       }
+
     // this is to get the stores the user liked in order to render in the user profile
     getStoresLiked = (storeId) => {
         return this.app.post(`/api/like/${storeId}`)
     }
     
-   /*  // this is to get the stores the user liked in order to render in the Homepage
-    getUsersLikedStores = (userId) => {
-        return this.app.get(`/api/store/${userId}/like`)
-    } */
-
-    // To get the liked stores filtered by user's friends
+       // To get the liked stores filtered by user's friends
     getStoresFriends = () => {
         //return this.app.get('/api/store/friends-store')
         return this.app.get('/api/like/friendsStores')

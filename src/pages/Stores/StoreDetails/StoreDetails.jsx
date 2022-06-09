@@ -43,7 +43,7 @@ function StoreDetails() {
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header>
-                <strong>Menu</strong>
+                <strong>Best Rated</strong>
               </Accordion.Header>
               <Accordion.Body>
                 <div class="container">
