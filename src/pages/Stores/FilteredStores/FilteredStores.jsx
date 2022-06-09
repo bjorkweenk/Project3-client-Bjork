@@ -23,6 +23,7 @@ function FilteredStores() {
 
   return filteredStores ? (
     <Container>
+      <a href="/home"> <img className="logo13" src="../home.png"></img></a>
       {filteredStores.map((store) => (
         <StoreCard store={store} />
       ))}

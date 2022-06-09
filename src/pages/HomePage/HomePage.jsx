@@ -45,92 +45,92 @@ const HomePage = (props) => {
 
         <div class="cuisinetype">
           <a href="/filtered-stores/Pizza"><img class="circle" src="pizza1.png" width={100} height={100} />
-          <p> Pizza </p></a>
+          <p class="cuisinetypename"> Pizza </p></a>
         </div>
 
         <div class="cuisinetype">
           <a href="/filtered-stores/Sushi"><img class="square" src="Sushi.png" width={100} height={100} />
-          <p> Sushi </p></a>
+          <p class="cuisinetypename"> Sushi </p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Thai"><img class="square" src="thai.png" width={100} height={100} />
-          <p> Thai</p></a>
+          <p class="cuisinetypename"> Thai</p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Chinese"><img class="gyoza" src="chinese1.png" width={100} height={100} />
-          <p> Chinese </p> </a>
+          <p class="cuisinetypename"> Chinese </p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Ramen"><img class="gyoza" src="ramenn.png" width={100} height={100} />
-          <p> Ramen </p> </a>
+          <p class="cuisinetypename"> Ramen </p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Soup"><img class="gyoza" src="soup.png" width={100} height={100} />
-          <p> Soup</p> </a>
+          <p class="cuisinetypename"> Soup</p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Italian"><img class="square" src="italian.png" width={100} height={100} />
-          <p> Italian</p></a>
+          <p class="cuisinetypename"> Italian</p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Korean"><img class="square" src="korean.png" width={100} height={100} />
-          <p> Korean</p></a>
+          <p class="cuisinetypename"> Korean</p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Vegan"><img class="square" src="vegan.png" width={100} height={100} />
-          <p> Vegan</p></a>
+          <p class="cuisinetypename"> Vegan</p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Healthy"><img class="gyoza" src="healthy1.png" width={100} height={100} />
-          <p> Healthy</p></a>
+          <p class="cuisinetypename"> Healthy</p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Indian"><img class="square" src="indian.png" width={100} height={100} />
-          <p> Indian </p></a>
+          <p class="cuisinetypename"> Indian </p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Burgers"><img class="gyoza" src="hambrgerss.png" width={100} height={100} />
-          <p> Burgers</p></a>
+          <p class="cuisinetypename"> Burgers</p></a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Breakfast"> <img class="square" src="breakfast.png" width={100} height={100} />
-          <p> Breakfast</p> </a>
+          <p class="cuisinetypename"> Breakfast</p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Salad"> <img class="square" src="Salads.png" width={100} height={100} />
-          <p> Salads</p> </a>
+          <p class="cuisinetypename"> Salads</p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Mexican"> <img class="square" src="/mexican.png" width={100} height={100} />
-          <p> Mexican</p> </a>
+          <p class="cuisinetypename"> Mexican</p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Vegetarian"> <img class="gyoza" src="/vegetarian.png" width={100} height={100} />
-          <p> Vegetarian</p> </a>
+          <p class="cuisinetypename"> Vegetarian</p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Sandwiches"><img class="gyoza" src="sandwhich.png" width={100} height={100} />
-          <p> Sandwhich</p> </a>
+          <p class="cuisinetypename"> Sandwhich</p> </a>
         </div>
 
         <div class="cuisinetype">
         <a href="/filtered-stores/Mediterranean"> <img class="meditareann" src="/meditareannn.png" width={100} height={100}/>
-          <p> Mediterranean</p> </a>
+          <p class="cuisinetypename"> Mediterranean</p> </a>
         </div>
       </div>
       {friendsStores?.map((favStore, index)=>(

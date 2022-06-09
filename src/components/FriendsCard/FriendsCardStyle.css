@@ -33,13 +33,9 @@
 }
 
 .friendTagline {
+    white-space: pre; 
     color: black;
-    display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-  
-  
+    overflow-x: hidden;
+    width: 160px;
+  margin-left: 2px;
 }

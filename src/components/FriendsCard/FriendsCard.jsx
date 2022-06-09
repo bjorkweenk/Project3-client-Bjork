@@ -15,8 +15,8 @@ const FriendsCard = ({ friend, addFriends, setFollowing, search, setSearch, dele
           <h4 class="textA">{friend.username}</h4>
         </a>
 
-        <div>
-      <p className="friendTagline"> {friend.tagLine}</p>
+        <div className="friendTagline">
+      <p> {friend.tagLine}..</p>
       </div>
 
         <div className="buttonFollow">

@@ -50,7 +50,7 @@ const ProfilePage = () => {
                 <br></br>
 
                 <div className="contentEdit">
-                  <p className="userName"> {profile.tagLine}</p>
+                  <p className="userName1"> {profile.tagLine}</p>
                   <br></br>
 
                   {isUser && 
