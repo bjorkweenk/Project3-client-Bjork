@@ -20,13 +20,14 @@ const StoreCard = ({ store }) => {
       
       <div>
         <div class="tags">
-         {/* <p className="card-text">{store.storeAddress}</p> */}
-         <p className="card-text">{store.storePhone}</p>
-
+          <div class="tagsorder">
+          <p className="card-text" dangerouslySetInnerHTML={{__html: store.storeAddress}} ></p>  
+          <p className="card-text">{store.storePhone}</p>
           <p className="card-text">{store.deliveryTime}</p>
           <p className="card-text">{store.priceRange}</p>
-         {/*  <p className="card-text">{store.storeLikes}</p> */}
-         {/*  <LikesBtn store={store}/> */}
+          </div>
+          <p className="card-text">{store.storeLikes}  <LikesBtn className="card-text" store={store}/> </p> 
+          
          </div>
          </div>
         </div>

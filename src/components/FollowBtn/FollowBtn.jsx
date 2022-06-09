@@ -54,7 +54,7 @@ export default function FollowBtn({ friend, addFriends, setFollowing, search, se
       ) : (
         <Form onSubmit={handleFollow}>
           <button className="friendsBtn">
-            Follow 
+          Follow 
           </button>
         </Form>
       )}
