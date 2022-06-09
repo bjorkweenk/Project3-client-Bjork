@@ -23,6 +23,7 @@ function StoreDetails() {
 
   return storeDetails ? (
     <Container>
+      <a href="/home"> <img className="logo13" src="../home.png"></img></a>
       <h1>{storeDetails.storeName}</h1>
       <hr />
       <Row>

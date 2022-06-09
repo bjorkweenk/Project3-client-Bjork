@@ -54,15 +54,13 @@ input {
     width: 300px;
     border-radius : 20px; 
     border-style: none;
-    color: white ;
-    background-color: #c66c6c;
-  
+    color: grey ;
+    background-color: white;
+   
 }
 
 .inputPicture {
     padding: 10px;
-    
-   
 }
 
 input[type="file"]::-webkit-file-upload-button{

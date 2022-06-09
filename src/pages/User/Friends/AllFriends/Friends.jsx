@@ -41,9 +41,11 @@ export default function Friends() {
 
   return (
     <>
+    <div> 
+    <a href="/home"> <img className="logo13" src="/home.png"/> </a>  
+    </div>
       {isLoggedIn && (
         <>
-      <a href="/home"> <img class="logo11" src="home.png" /></a> 
       <div class="Friends">
         <SearchFriends
           search={search}
@@ -76,6 +78,7 @@ export default function Friends() {
         ) : (
           <Loader />
         )}
+        
         <div>
           <br></br>
           <a href="/home" class="button9">

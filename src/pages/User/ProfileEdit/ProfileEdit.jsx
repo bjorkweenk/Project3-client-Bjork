@@ -76,7 +76,7 @@ const ProfileEdit = () => {
 
      
       <>
-     <a href="/home"><img className="logo11" src="/home.png" /> </a>  
+     <a href="/home"> <img className="logo11" src="/home.png"/> </a>  
 
         <div className="background2">
          <a href="/home"><img className="logo6" src="/logo.jpg" /> </a>  
