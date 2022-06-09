@@ -4,6 +4,7 @@ import FriendsCard from "../../components/FriendsCard/FriendsCard";
 import Loader from "../Loader/Loader";
 import { AuthContext } from "../../context/auth.context";
 import FriendsService from "../../services/friends.service.js";
+import "./SearchFriends.css"
 
 const SearchFriends = ({search, setSearch}) => {
   const { user } = useContext(AuthContext);
@@ -33,23 +34,28 @@ const SearchFriends = ({search, setSearch}) => {
   };
 
   return (
-    <div className="input-group">
+    <div>
       <form>
-        <div className="form-outline">
+        <div className="formline">
+          <div class="wrapper">
           <input
             onChange={handleSearch}
             value={search}
             type="search"
             id="form1"
             className="form-control"
-          />
-          <label className="form-label" htmlFor="form1"></label>
-        </div>
-        <button type="submit" className="btn btn-primary">
-          {" "}
+            placeholder="Search"
+          />  
+           <button class="button5" type="submit">
           Search
           <i className="fas fa-search"></i>
-        </button>
+        </button> 
+          </div>
+          </div>
+         
+          <label className="form-label" htmlFor="form1"></label>
+        
+      
       </form>
 
       {friendsData ? (

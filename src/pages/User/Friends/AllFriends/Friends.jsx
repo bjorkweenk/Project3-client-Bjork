@@ -3,6 +3,7 @@ import FriendsCard from "../../../../components/FriendsCard/FriendsCard"
 import Loader from "../../../../components/Loader/Loader"
 import FriendsService from "./../../../../services/friends.service.js"
 import SearchFriends from "../../../../components/SearchFriends/SearchFriends"
+import "./Friends.css"
 
 
 export default function Friends (){
@@ -37,13 +38,15 @@ export default function Friends (){
 
     return (
         <>
-        <div>
-            <SearchFriends search={search} setSearch={setSearch}/>
+
+        <div class="Friends">
+            <SearchFriends />
+
         </div>
         <div>
         {friends
             ?
-            <div>
+            <div className='friendsCardWrapper'>
                 {
                     friends.map(friend => {
                         return (
@@ -55,9 +58,11 @@ export default function Friends (){
                 }             
             </div>
             :
-            <Loader />}
+     
+     <Loader />}
 <div>
-<a href="/home"> <button> go back  </button></a>
+    <br></br>
+<a href="/home" class="button9"> <img src="https://flyclipart.com/thumb2/arrow-to-the-left-arrow-png-icon-free-download-510843.png" width={15} height={15}/> </a>
 </div>
             </div>
            

@@ -78,7 +78,7 @@ const ProfileEdit = () => {
 
 
         <div className="background2">
-         <a href="/home"><img class="logo6" src="/logo.jpg" /> </a>  
+         <a href="/home"><img className="logo6" src="/logo.jpg" /> </a>  
         <form onSubmit={handleSubmit}>
             <div className="name" controlId="name">
                 <label className="text2">Name</label>

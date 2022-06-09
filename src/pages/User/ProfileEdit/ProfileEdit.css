@@ -21,12 +21,12 @@ form {
 	margin-left: 110px; 
     margin-top: 30px;
     margin-bottom: 30px;
-    filter: drop-shadow(10px 10px 4px #760c0c);
+    filter: drop-shadow(10px 10px 4px #db2727);
     
 }
 
 .text2 {
-        color: #760c0c;
+        color: #db2727;
         margin-top: 20px;
         font-family: 'Quicksand', sans-serif;
         font-weight: 400;
@@ -40,7 +40,7 @@ form {
 }
 
 .background2 {
-    border: 0.5px solid #760c0c ; 
+    border: 0.5px solid #db2727 ; 
     padding: 20px;
     padding-bottom: 60px;
     margin-top: 20px;
@@ -70,7 +70,7 @@ input[type="file"]::-webkit-file-upload-button{
     border-radius: 20px;
     border-style: none;
     padding: 10px;
-    background-color: #760c0c;
+    background-color: #db2727;
     font-weight: 600;
 }
 
@@ -81,7 +81,7 @@ input[type="file"] {
 }
 
 .button2 {
-    color: #760c0c;
+    color: #db2727;
     border-radius: 20px;
     background-color: white;
     margin-top: 20px ;
