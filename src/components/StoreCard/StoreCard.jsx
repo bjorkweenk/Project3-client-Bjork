@@ -26,8 +26,11 @@ const StoreCard = ({ store }) => {
           <p className="card-text">{store.deliveryTime}</p>
           <p className="card-text">{store.priceRange}</p>
           </div>
-          <p className="card-text">{store.storeLikes}  <LikesBtn className="card-text" store={store}/> </p> 
-          
+        
+        <div class="favoritelikes">
+       {/*  <p className="card-text">{store.storeLikes} </p>    */}
+       <LikesBtn className="card-text" store={store}/>
+       </div>
          </div>
          </div>
         </div>

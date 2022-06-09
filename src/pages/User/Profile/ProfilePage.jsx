@@ -24,6 +24,8 @@ const ProfilePage = () => {
  
   return (
     <>
+    <a href="/home"> <img class="logo11" src="../home.png" /></a> 
+
       {profile ? (
         <Container>
           <div class="contentUser">

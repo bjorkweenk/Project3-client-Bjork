@@ -97,3 +97,17 @@ input[type="file"] {
 
 
 
+.logo11 {
+  
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-end;
+align-items: baseline;
+align-content: stretch;        
+margin-left: 330px; 
+margin-top: -40px; 
+}

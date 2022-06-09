@@ -44,6 +44,9 @@ export default function Friends (){
     return (
         <>
 
+   
+      <a href="/home"> <img class="logo11" src="home.png" /></a> 
+
         <div class="Friends">
             <SearchFriends search={search} setSearch={setSearch} addFriends={addFriends} setFollowing= {setFollowing} deleteFriends={deleteFriends}/>
 

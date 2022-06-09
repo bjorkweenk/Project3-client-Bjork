@@ -27,19 +27,19 @@ export default function LikesBtn({ store }) {
   return (
     <>
       <div>
-        <p>{likes?.length} Likes </p>
-        <div className="div-btn">
+       
+   
           <button className="heartbutton" onClick={handleOnChange}>
             <div>
-              <img
-                src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png"
-                style={{ width: "30px" }}
+              <img class="heartbutton1"
+                src="../heart.png"
                 alt="like button"
-              />
+              /> 
             </div>
+            <p class="likes">{likes?.length} Likes </p> 
           </button>
         </div>
-      </div>
+      
     </>
   );
 }

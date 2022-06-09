@@ -74,8 +74,9 @@ const ProfileEdit = () => {
   
     return (
 
-    
-
+     
+      <>
+     <a href="/home"><img className="logo11" src="/home.png" /> </a>  
 
         <div className="background2">
          <a href="/home"><img className="logo6" src="/logo.jpg" /> </a>  
@@ -109,8 +110,9 @@ const ProfileEdit = () => {
             <button class="button2" type="submit"> Confirm </button>
         </form>
         </div>
-
+        </>
     )
+    
 }
  
 export default ProfileEdit
