@@ -6,10 +6,11 @@ import SearchFriends from "../../../../components/SearchFriends/SearchFriends"
 import "./Friends.css"
 
 
-const Friends= () => {
+export default function Friends (){
 
     const [friends, setFriends] = useState(null);
     const [following, setFollowing] = useState (null)
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         FriendsService
@@ -37,8 +38,10 @@ const Friends= () => {
 
     return (
         <>
+
         <div class="Friends">
             <SearchFriends />
+
         </div>
         <div>
         {friends
@@ -48,7 +51,7 @@ const Friends= () => {
                     friends.map(friend => {
                         return (
                             <div key={friend._id}>
-                                <FriendsCard friend = {friend} addFriends={addFriends} setFollowing= {setFollowing}/>
+                                <FriendsCard search={search} setSearch={setSearch} friend = {friend} addFriends={addFriends} setFollowing= {setFollowing}/>
                             </div>
                         )
                     })
@@ -67,7 +70,7 @@ const Friends= () => {
     )
 }
 
-export default Friends
+
 
 
 

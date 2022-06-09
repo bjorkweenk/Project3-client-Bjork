@@ -1,8 +1,7 @@
-import React from "react";
 import "./Navigation.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
 
 const Navigation = () => {

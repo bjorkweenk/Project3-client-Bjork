@@ -1,17 +1,16 @@
-import React from "react";
 import { Col } from "react-bootstrap";
-import { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import FriendsCard from "../../components/FriendsCard/FriendsCard";
 import Loader from "../Loader/Loader";
 import { AuthContext } from "../../context/auth.context";
 import FriendsService from "../../services/friends.service.js";
 import "./SearchFriends.css"
 
-const SearchFriends = () => {
+const SearchFriends = ({search, setSearch}) => {
   const { user } = useContext(AuthContext);
   const [friendsData, setFriendsData] = useState(null);
   const [filteredFriends, setFilteredFriends] = useState([]);
-  const [search, setSearch] = useState("");
+  
 
   useEffect(() => {
     FriendsService.searchNewFriends()

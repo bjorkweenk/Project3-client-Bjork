@@ -1,5 +1,4 @@
-import React from 'react';
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import StoresService from "../../../services/store.service.js"
 import StoreCard from "../../../components/StoreCard/StoreCard"
 import Loader from "../../../components/Loader/Loader"

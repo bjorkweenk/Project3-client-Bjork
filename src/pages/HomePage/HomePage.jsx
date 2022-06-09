@@ -1,6 +1,5 @@
-import React from "react";
 //import { Link, AuthContext } from 'react-router-dom'
-import { useState, useContext, useEffect } from "react";
+import React , { useState, useContext, useEffect } from "react";
 import StoresService from "../../services/store.service.js";
 import "./HomePage.css";
 import StoreCard from "../../components/StoreCard/StoreCard.jsx";

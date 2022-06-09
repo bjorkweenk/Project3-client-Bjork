@@ -1,9 +1,9 @@
 import "./FriendsCardStyle.css";
-import { React, useContext,} from "react";
+import React, { useContext,} from "react";
 import { AuthContext } from "../../context/auth.context.js";
 import FollowBtn from "../FollowBtn/FollowBtn";
 
-const FriendsCard = ({ friend, addFriends, setFollowing }) => {
+const FriendsCard = ({ friend, addFriends, setFollowing, search, setSearch}) => {
   const { user } = useContext(AuthContext);
 
   return (
@@ -20,7 +20,7 @@ const FriendsCard = ({ friend, addFriends, setFollowing }) => {
       </div>
 
         <div className="buttonFollow">
-          <FollowBtn
+          <FollowBtn search={search} setSearch={setSearch}
             friend={friend}
             addFriends={addFriends}
             setFollowing={setFollowing}

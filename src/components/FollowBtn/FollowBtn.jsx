@@ -1,10 +1,10 @@
 import "./FollowBtn.css"
 import { Form } from "react-bootstrap";
-import { React, useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import FriendService from "./../../services/friends.service";
 
 
-export default function FollowBtn({ friend, addFriends, setFollowing }) {
+export default function FollowBtn({ friend, addFriends, setFollowing, search, setSearch }) {
   const [isFollowing, setIsFollowing] = useState(null);
 
   useEffect(() => {
