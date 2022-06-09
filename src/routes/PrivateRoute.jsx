@@ -14,8 +14,8 @@ const PrivateRoute = () => {
     }
 
     if (!isLoggedIn) {
-        showMessage('Desautorizad@', 'Inicia sesión para acceder')
-        return <Navigate to="/inicio-sesion" />
+        showMessage('Hi, please login or signup to enjoy Sharelicious!')
+        return <Navigate to="/signup" />
     }
 
     return <Outlet />
