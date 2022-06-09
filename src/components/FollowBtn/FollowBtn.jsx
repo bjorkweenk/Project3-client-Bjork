@@ -4,7 +4,7 @@ import React, { useContext, useState, useEffect } from "react";
 import FriendService from "./../../services/friends.service";
 
 
-export default function FollowBtn({ friend, addFriends, setFollowing, search, setSearch }) {
+export default function FollowBtn({ friend, addFriends, setFollowing, search, setSearch, deleteSearch, deleteFriends }) {
   const [isFollowing, setIsFollowing] = useState(null);
 
   useEffect(() => {
@@ -24,6 +24,8 @@ export default function FollowBtn({ friend, addFriends, setFollowing, search, se
         setIsFollowing(true);
         setFollowing(true);
         addFriends(friend);
+        setSearch("");
+        deleteSearch();
       })
       .catch((error) => console.log(error));
   };
@@ -34,7 +36,8 @@ export default function FollowBtn({ friend, addFriends, setFollowing, search, se
     FriendService.unfollowFriend(friend._id)
       .then(() => {
         setIsFollowing(false);
-        setFollowing(false);
+        setFollowing(null);
+        deleteFriends(friend._id);
       })
 
       .catch((error) => console.log(error));

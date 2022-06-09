@@ -1,5 +1,6 @@
 import React,{ useContext, useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import { AuthContext } from "../../../context/auth.context.js"
 import "./Profile.css";
 import userService from "../../../services/user.service";
 import Loader from "../../../components/Loader/Loader";
@@ -8,6 +9,7 @@ import StoreCard from "../../../components/StoreCard/StoreCard"
 
 const ProfilePage = () => {
   const { id } = useParams();
+  const { isLoggedIn, user } = useContext(AuthContext);
   
   const [profile, setProfile] = useState(null);
 
@@ -49,11 +51,7 @@ const ProfilePage = () => {
             <div className="container">
               <div className="row">
               {profile.favoriteStores.map((store, idx) => <StoreCard key={idx} store={store}/>)}
-               {/*  <img
-                  className="storeImage"
-                  src={profile.storeImg}
-                  alt={profile.storeImg}
-                /> */}
+               
               </div>
             </div>
 

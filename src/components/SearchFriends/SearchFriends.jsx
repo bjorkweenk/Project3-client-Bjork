@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/auth.context";
 import FriendsService from "../../services/friends.service.js";
 import "./SearchFriends.css"
 
-const SearchFriends = ({search, setSearch}) => {
+const SearchFriends = ({search, setSearch, addFriends, setFollowing}) => {
   const { user } = useContext(AuthContext);
   const [friendsData, setFriendsData] = useState(null);
   const [filteredFriends, setFilteredFriends] = useState([]);
@@ -32,6 +32,10 @@ const SearchFriends = ({search, setSearch}) => {
       setFilteredFriends(newFriendsSearch);
     }
   };
+
+  const deleteSearch = (e) => {
+    setFilteredFriends([]);
+  }
 
   return (
     <div>
@@ -62,7 +66,7 @@ const SearchFriends = ({search, setSearch}) => {
         filteredFriends.map((friend) => {
           return (
             <Col md={{ span: 4 }} key={friend._id}>
-              <FriendsCard friend={friend} />
+              <FriendsCard search={search} setSearch={setSearch} friend = {friend} addFriends={addFriends} setFollowing= {setFollowing} deleteSearch={deleteSearch}/>
             </Col>
           );
         })
