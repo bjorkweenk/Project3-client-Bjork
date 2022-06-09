@@ -8,7 +8,7 @@ export default function LikesBtn ({store}) {
   const [likes, setLikes] = useState(null);
 
   useEffect(() =>{
-    setLikes(store.storeLikes)
+    setLikes(store.storeLikes.length)
   }, [])
 
   const handleOnChange= (e) => {
@@ -30,7 +30,7 @@ export default function LikesBtn ({store}) {
           <div>
             <img
               src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png"
-              style= {{"width":"30px"}} alt= "like button" value= {store.storeLikes}
+              style= {{"width":"30px"}} alt= "like button" 
             />
           </div>
         </button>
@@ -51,7 +51,3 @@ export default function LikesBtn ({store}) {
   }
 }
  */
-
-
-
-
