@@ -92,7 +92,7 @@ button {
 
 .logo12 {
   
-    height: 1.5rem;
+height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
 display: flex;
@@ -102,6 +102,6 @@ justify-content: flex-end;
 align-items: baseline;
 align-content: stretch;        
 margin-left: 330px; 
-margin-top: -180px; 
+margin-top: -150px; 
 margin-right: 20px;
 }
