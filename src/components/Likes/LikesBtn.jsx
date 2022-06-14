@@ -31,7 +31,7 @@ export default function LikesBtn({ store }) {
    
           <button className="heartbutton" onClick={handleOnChange}>
             <div>
-              <img class="heartbutton1"
+              <img className="heartbutton1"
                 src="../heart.png"
                 alt="like button"
               /> 

@@ -5,19 +5,19 @@ const Splash = () => {
   return (
     <>
       {/*  logo & column 1   */}
-      <img class="logo" src="../../../logo.jpg" />
+      <img className="logo" src="../../../logo.jpg" />
       <br></br>
 
-      <div class="splashColumn">
-        <img class="splash" src="/food.png" width={200} height={500}></img>
+      <div className="splashColumn">
+        <img className="splash" src="/food.png" width={200} height={500}></img>
 
-        <div class="splashTags">
-          <h2 class="tag1">
+        <div className="splashTags">
+          <h2 className="tag1">
             {" "}
-            Sharelicious <hr class="linetag" />
+            Sharelicious <hr className="linetag" />
           </h2>
-          <div class="splashcolor">
-            <h4 class="tag2"> CONNECT </h4>
+          <div className="splashcolor">
+            <h4 className="tag2"> CONNECT </h4>
             <p>
               {" "}
               this is the beset way to connect and always find a great place to
@@ -29,31 +29,31 @@ const Splash = () => {
 
       {/*   column 2  */}
 
-      <div class="splashColumn1">
-        <div class="splashTags1">
-          <h4 class="tag5"> RECOMMEND </h4>
+      <div className="splashColumn1">
+        <div className="splashTags1">
+          <h4 className="tag5"> RECOMMEND </h4>
           <p>
             {" "}
             Get your beset recommendations from your friends. Go to your friends
             page and see their favourites{" "}
           </p>
         </div>
-        <img class="splash1" src="/chinese1.png" width={200} height={500}></img>
+        <img className="splash1" src="/chinese1.png" width={200} height={500}></img>
       </div>
 
       {/*  column 3  */}
-      <img class="splash3" src="./cheese.png" width={300} height={300}></img>
+      <img className="splash3" src="./cheese.png" width={300} height={300}></img>
 
-      <div class="splashTags2">
-        <h4 class="tag6"> SHARE </h4>
+      <div className="splashTags2">
+        <h4 className="tag6"> SHARE </h4>
         <p>
           {" "}
           The favourite activity is to eat together.<br></br> What better way to
           share and connect.{" "}
         </p>
       </div>
-      <div  class="splashpeople">
-      <img class="splashpeople" src="./people.png" width={300} height={300}/>
+      <div  className="splashpeople">
+      <img className="splashpeople" src="./people.png" width={300} height={300}/>
       </div>
     </>
   );

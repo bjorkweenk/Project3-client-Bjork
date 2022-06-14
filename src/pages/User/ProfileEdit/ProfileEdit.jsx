@@ -101,13 +101,13 @@ const ProfileEdit = () => {
             </div>
 
            
-            <div class="profilepicture" controlId="imageUrl">
+            <div className="profilepicture" controlId="imageUrl">
                 <label className="text2"> profile picture</label>
                 <br></br>
-                <input class="inputPicture" type="file" onChange= {handleImageUpload} />
+                <input className="inputPicture" type="file" onChange= {handleImageUpload} />
             </div> 
 
-            <button class="button2" type="submit"> Confirm </button>
+            <button className="button2" type="submit"> Confirm </button>
         </form>
         </div>
         </>
