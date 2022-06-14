@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from "react";
 import StoresService from "../../services/store.service.js";
 import "./LikesBtn.css";
 import { AuthContext } from "../../context/auth.context.js";
-import { render } from 'react-dom'
 
 
 export default function LikesBtn({ store }) {
