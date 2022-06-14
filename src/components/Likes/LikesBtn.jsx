@@ -36,7 +36,7 @@ export default function LikesBtn({ store }) {
                 alt="like button"
               /> 
             </div>
-            <p class="likes">{likes?.length} Likes </p> 
+            <p className="likes">{likes?.length} Likes </p> 
           </button>
         </div>
       
