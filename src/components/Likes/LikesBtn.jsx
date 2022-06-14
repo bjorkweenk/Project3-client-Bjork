@@ -12,8 +12,8 @@ export default function LikesBtn({ store }) {
     setLikes(store.storeLikes);
   }, []);
 
-  const handleOnChange = (e) => {
-    e.preventDefault();
+  const handleOnChange = (event) => {
+    event.preventDefault();
     const userID = user?._id;
     const includesUser = likes.map(({ _id }) => _id).includes(userID);
     setIsLiked(includesUser);
