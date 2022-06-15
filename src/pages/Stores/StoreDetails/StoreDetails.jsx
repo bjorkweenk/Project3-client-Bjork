@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import StoresService from "./../../../services/store.service.js";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-import LikesBtn from "../../../components/Likes/LikesBtn";
+//import LikesBtn from "../../../components/Likes/LikesBtn";
 import "./StoreDetails.css";
 import Accordion from "react-bootstrap/Accordion";
 
@@ -33,7 +33,7 @@ function StoreDetails() {
             src={storeDetails.storeImg}
             alt="store-img"
           />
-          <LikesBtn store={storeDetails}/>
+          {/* <LikesBtn store={storeDetails}/> */}
           <p>Price range: {storeDetails.priceRange}</p>
           <p>Delivery time: {storeDetails.deliveryTime}</p>
           <a className="storedetails" href={storeDetails.storeAddress} target="_blank">

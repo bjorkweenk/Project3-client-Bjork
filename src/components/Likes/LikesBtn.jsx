@@ -1,10 +1,10 @@
 import React from "react";
-import { useState, useEffect, useContext } from "react";
-import StoresService from "../../services/store.service.js";
-import "./LikesBtn.css";
-import { AuthContext } from "../../context/auth.context.js";
+//import { useState, useEffect, useContext } from "react";
+//import StoresService from "../../services/store.service.js";
+//import "./LikesBtn.css";
+//import { AuthContext } from "../../context/auth.context.js";
 
-function LikesBtn({ store }) {
+/* function LikesBtn({ store }) {
   const [likes, setLikes] = useState(null);
   const { user } = useContext(AuthContext);
   const [isLiked, setIsLiked] = useState(false);
@@ -45,4 +45,12 @@ function LikesBtn({ store }) {
   );
 }
 
-export default LikesBtn;
+export default LikesBtn; */
+
+export default function Hola () {
+  return(
+    <div>
+      <h1>HOLA</h1>
+    </div>
+  )
+}
