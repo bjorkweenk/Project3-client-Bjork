@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
+import { useState, useEffect, useContext } from "react";
 import StoresService from "../../services/store.service.js";
 import "./LikesBtn.css";
 import { AuthContext } from "../../context/auth.context.js";
@@ -12,8 +13,8 @@ function LikesBtn({ store }) {
     setLikes(store.storeLikes);
   }, []);
 
-  const handleOnChange = (e) => {
-    e.preventDefault();
+  const handleOnChange = (event) => {
+    event.preventDefault();
     const userID = user?._id;
     const includesUser = likes.map(({ _id }) => _id).includes(userID);
     setIsLiked(includesUser);
@@ -31,12 +32,12 @@ function LikesBtn({ store }) {
    
           <button className="heartbutton" onClick={handleOnChange}>
             <div>
-              <img class="heartbutton1"
+              <img className="heartbutton1"
                 src="../heart.png"
                 alt="like button"
               /> 
             </div>
-            <p class="likes">{likes?.length} Likes </p> 
+            <p className="likes">{likes?.length} Likes </p> 
           </button>
         </div>
       

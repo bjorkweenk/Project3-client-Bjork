@@ -44,7 +44,7 @@ const SearchFriends = ({ search, setSearch, addFriends, setFollowing }) => {
         <div>
           <form>
             <div className="formline">
-              <div class="wrapper">
+              <div className="wrapper">
                 <input
                   onChange={handleSearch}
                   value={search}
@@ -53,7 +53,7 @@ const SearchFriends = ({ search, setSearch, addFriends, setFollowing }) => {
                   className="form-control"
                   placeholder="Search"
                 />
-                <button class="button5" type="submit">
+                <button className="button5" type="submit">
                   Search
                   <i className="fas fa-search"></i>
                 </button>

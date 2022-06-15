@@ -40,10 +40,10 @@ const Loginform = () => {
 
     return (
         <>
-            <div class="background">
+            <div className="background">
                 <div>
                     {" "}
-            <a href="/">  <img class="logo" src="/logo.jpg" /> </a>
+            <a href="/">  <img className="logo" src="/logo.jpg" /> </a>
                 </div>
 
                 <form className="formLogging" onSubmit={handleSubmit}>
