@@ -3,7 +3,7 @@ import StoresService from "../../services/store.service.js";
 import "./LikesBtn.css";
 import { AuthContext } from "../../context/auth.context.js";
 
-export default function LikesBtn({ store }) {
+function LikesBtn({ store }) {
   const [likes, setLikes] = useState(null);
   const { user } = useContext(AuthContext);
   const [isLiked, setIsLiked] = useState(false);
@@ -44,3 +44,4 @@ export default function LikesBtn({ store }) {
   );
 }
 
+export default LikesBtn;
