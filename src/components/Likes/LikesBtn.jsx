@@ -44,13 +44,3 @@ export default function LikesBtn({ store }) {
   );
 }
 
-/* 
-
-  handleOnChange = (event) => {
-    this.setState({ count: this.state.count + 1 });
-@@ -27,6 +60,6 @@ class LikesBtn extends Component {
-      </div>
-    );
-  }
-}
- */
