@@ -4,6 +4,7 @@ import StoresService from "./../../../services/store.service.js";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 // import LikesBtn from "../../../components/Likes/LikesBtn";
+
 import "./FilteredStores.css";
 import StoreCard from "../../../components/StoreCard/StoreCard.jsx";
 
