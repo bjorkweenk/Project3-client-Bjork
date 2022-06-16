@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 import "./Favourites.css";
 import axios from "axios"
 import { Button} from "react-bootstrap";
@@ -30,4 +30,4 @@ const Favourites = (props) => {
     );
     }
 
-export default Favourites; */
+export default Favourites;

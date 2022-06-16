@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 //import { useContext } from "react";
 //import { AuthContext } from "../../context/auth.context";
-//import LikesBtn from "../Likes/LikesBtn"
+import LikesBtn from "../Likes/LikesBtn"
 
 const StoreCard = ({ store }) => {
   //const { user } = useContext(AuthContext);
@@ -32,7 +32,7 @@ const StoreCard = ({ store }) => {
         
         <div className="favoritelikes">
         {/*  <p className="card-text">{store.storeLikes} </p>     */} 
-      {/*  <LikesBtn className="card-text" store={store}/> */}
+       <LikesBtn className="card-text" store={store}/> 
        </div>
          </div>
          </div>
