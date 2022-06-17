@@ -36,14 +36,14 @@ const ProfilePage = () => {
       {isLoggedIn &&
         ( profile  ? (
           <Container>
-            <div class="contentUser">
+            <div className="contentUser">
               <img
                 className="userImage"
                 src={profile.userImg}
                 alt={profile.userImg}
               />
 
-<a href="/home"> <img class="logo12" src="../home.png" /></a>  
+<a href="/home"> <img className="logo12" src="../home.png" /></a>  
  
               <div className="contentEdit">
                 <h5 className="userName"> {profile.username}</h5>
@@ -55,7 +55,7 @@ const ProfilePage = () => {
 
                   {isUser && 
                   <a href={`/profile-edit/${profile._id}`}>
-                    <button class="editBtn"> edit</button>
+                    <button className="editBtn"> edit</button>
                   </a>}
                 </div>
               </div>
@@ -71,7 +71,7 @@ const ProfilePage = () => {
 
               <a href="/home">
                 {" "}
-                <a href="/home" class="button10">
+                <a href="/home" className="button10">
                   {" "}
                   <img
                     src="https://flyclipart.com/thumb2/arrow-to-the-left-arrow-png-icon-free-download-510843.png"

@@ -32,7 +32,7 @@ const StoreCard = ({ store }) => {
         
         <div className="favoritelikes">
         {/*  <p className="card-text">{store.storeLikes} </p>     */} 
-       <LikesBtn className="card-text" store={store}/>
+       <LikesBtn className="card-text" store={store}/> 
        </div>
          </div>
          </div>

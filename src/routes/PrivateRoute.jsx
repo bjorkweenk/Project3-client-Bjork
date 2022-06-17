@@ -23,5 +23,5 @@ const PrivateRoute = () => {
     </div>
 }
 
-
 export default PrivateRoute
+

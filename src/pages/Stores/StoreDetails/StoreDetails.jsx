@@ -33,37 +33,37 @@ function StoreDetails() {
             src={storeDetails.storeImg}
             alt="store-img"
           />
-          <LikesBtn store={storeDetails}/>
+          <LikesBtn store={storeDetails}/> 
           <p>Price range: {storeDetails.priceRange}</p>
           <p>Delivery time: {storeDetails.deliveryTime}</p>
-          <a class="storedetails" href={storeDetails.storeAddress} target="_blank">
+          <a className="storedetails" href={storeDetails.storeAddress} target="_blank">
             See location
           </a>
           <br></br>
-          <a class="storedetails" href={storeDetails.storePhone}>Phone </a>
+          <a className="storedetails" href={storeDetails.storePhone}>Phone </a>
           <Accordion>
             <Accordion.Item eventKey="0">
               <Accordion.Header>
                 <strong>Best Rated</strong>
               </Accordion.Header>
               <Accordion.Body>
-                <div class="container">
-                  <div class="row">
+                <div className="container">
+                  <div className="row">
                     {storeDetails.products.map((product) => (
-                      <div key={product._id} class="card col-6 space-btw-cards">
+                      <div key={product._id} className="card col-6 space-btw-cards">
                         <img
                           className="card-img-top"
                           src={product.productImg}
                           alt="Card image cap"
                         ></img>
                         <div className="card-body">
-                          <h5 class="card-title">{product.productName}</h5>
+                          <h5 className="card-title">{product.productName}</h5>
                           <p className="card-text">
                             {product.productDescription}
                           </p>
                         </div>
 
-                        <div class="card-footer">{product.productPrice}</div>
+                        <div className="card-footer">{product.productPrice}</div>
                       </div>
                     ))}
                   </div>
@@ -75,10 +75,10 @@ function StoreDetails() {
                 <strong>Comments</strong>
               </Accordion.Header>
               <Accordion.Body>
-                <div class="container">
+                <div className="container">
                   {storeDetails.comments.map((comment) => (
-                    <div class="row">
-                      <div class="col-2 ">
+                    <div className="row">
+                      <div className="col-2 ">
                         <img
                           src={comment.owner.userImg}
                           className="mr-3 owner-img-size"
@@ -86,9 +86,9 @@ function StoreDetails() {
                         ></img>
                       </div>
 
-                      <div class="col-10">
-                        <h5 class="mt-0">{comment.owner.username}</h5>
-                        <p class="comment">{comment.message}</p>
+                      <div className="col-10">
+                        <h5 className="mt-0">{comment.owner.username}</h5>
+                        <p className="comment">{comment.message}</p>
                       </div>
                     </div>
                   ))}

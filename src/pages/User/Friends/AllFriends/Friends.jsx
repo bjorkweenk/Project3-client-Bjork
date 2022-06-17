@@ -46,7 +46,7 @@ export default function Friends() {
     </div>
       {isLoggedIn && (
         <>
-      <div class="Friends">
+      <div className="Friends">
         <SearchFriends
           search={search}
           setSearch={setSearch}
@@ -81,7 +81,7 @@ export default function Friends() {
         
         <div>
           <br></br>
-          <a href="/home" class="button9">
+          <a href="/home" className="button9">
             {" "}
             <img
               src="https://flyclipart.com/thumb2/arrow-to-the-left-arrow-png-icon-free-download-510843.png"

@@ -41,10 +41,10 @@ const Signup = () => {
 
   return (
     <>
-      <div class="back">
+      <div className="back">
         <div>
           {" "}
-         <a href="/"><img class="logo1" src="/logo.jpg" /></a> 
+         <a href="/"><img className="logo1" src="/logo.jpg" /></a> 
         </div>
 
         <form className="formLogging" onSubmit={handleSubmit}>

@@ -23,7 +23,7 @@ const Navigation = () => {
                 </NavLink>
 
                 {isLoggedIn ? (
-                  <a class="logoutLink" href="/">
+                  <a className="logoutLink" href="/">
                     {" "}
                     <div className="nav-link" onClick={logOutUser}>
                       Logout

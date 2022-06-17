@@ -8,11 +8,11 @@ const FriendsCard = ({ friend, addFriends, setFollowing, search, setSearch, dele
 
   return (
     <div className="friendsCard">
-      <img class="imagefriends" src={friend.userImg}  />
+      <img className="imagefriends" src={friend.userImg}  />
       <div>
 
-        <a class="textA" href={`/profile/${friend._id}`}>
-          <h4 class="textA">{friend.username}</h4>
+        <a className="textA" href={`/profile/${friend._id}`}>
+          <h4 className="textA">{friend.username}</h4>
         </a>
 
         <div className="friendTagline">
